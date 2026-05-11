@@ -1,6 +1,6 @@
 WEBSITES_PORT=4000
 PORT=4000
-DATABASE_URL=postgresql://<user>:<password>@<host>:5432/<db>?sslmode=require
+DATABASE_URL=sqlite:////home/site/wwwroot/server/data/ifl.sqlite3
 ADMIN_USERNAME=admin
 ADMIN_PASSWORD=<strong-admin-password>
 ADMIN_TOKEN_SECRET=<long-random-secret>

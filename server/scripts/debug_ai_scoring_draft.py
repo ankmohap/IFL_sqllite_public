@@ -264,7 +264,7 @@ def main() -> int:
     parser = argparse.ArgumentParser(description="Debug the AI scoring draft prompt and raw response.")
     parser.add_argument("--match-id", type=int, required=True, help="Match ID from the database.")
     parser.add_argument("--scorecard-url", default="", help="Preferred trusted scorecard URL.")
-    parser.add_argument("--database-url", default="", help="PostgreSQL DATABASE_URL override for this run.")
+    parser.add_argument("--database-url", default="", help="Optional DATABASE_URL override for this run.")
     parser.add_argument("--print-sources", action="store_true", help="Print full source metadata.")
     parser.add_argument("--insecure", action="store_true", help="Disable SSL certificate verification for local debugging.")
     parser.add_argument("--api-mode", choices=("auto", "chat", "responses"), default="auto", help="Azure OpenAI API shape to use.")

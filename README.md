@@ -2,7 +2,7 @@
 
 IFL is a full-stack IPL fantasy league app with user predictions, squad scoring, player swaps, leaderboard movement, admin scoring, and generated match reports.
 
-This local copy has been ported to use SQLite by default instead of PostgreSQL.
+This local copy is configured to use SQLite by default.
 
 ## Stack
 - Frontend: React + Vite in `client/`
@@ -63,7 +63,7 @@ Sample local credentials:
 docker build -t ifl-fullstack:latest .
 docker run --rm -p 4000:4000 \
   -e PORT=4000 \
-  -e DATABASE_URL='postgresql://<user>:<password>@<host>:5432/<db>?sslmode=require' \
+  -e DATABASE_URL='sqlite:////home/site/wwwroot/server/data/ifl.sqlite3' \
   -e ADMIN_USERNAME='admin' \
   -e ADMIN_PASSWORD='<password>' \
   -e ADMIN_TOKEN_SECRET='<secret>' \
@@ -243,21 +243,21 @@ python server/scripts/debug_ai_scoring_draft.py --match-id 38 --print-sources
 ```
 
 ## Data Migration
-SQLite to PostgreSQL:
+SQLite snapshot export:
 ```bash
-python server/scripts/migrate_sqlite_to_postgres.py \
+python server/scripts/export_sqlite_snapshot.py \
   --sqlite-path /Users/ankitmohapatra/Desktop/IFL/server/data/ifl.sqlite3 \
   --truncate-first
 ```
 
-PostgreSQL to SQLite:
+SQLite snapshot import:
 ```bash
-python server/scripts/migrate_postgres_to_sqlite.py \
+python server/scripts/import_sqlite_snapshot.py \
   --sqlite-path /Users/ankitmohapatra/Desktop/IFL/server/data/ifl.sqlite3 \
   --truncate-first
 ```
 
-Both migration paths should preserve current swap, prediction, snapshot, and login audit tables.
+Both snapshot utilities should preserve current swap, prediction, snapshot, and login audit tables.
 
 ## Azure
 See `deploy/azure/README.md` for App Service commands and Apple Silicon build notes.

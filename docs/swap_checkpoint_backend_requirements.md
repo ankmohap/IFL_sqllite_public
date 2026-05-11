@@ -190,7 +190,7 @@ For match 40, only window 1 swaps apply.
 For match 50, both window 1 and window 2 swaps apply in order.
 
 ## Migration Expectations
-PostgreSQL and SQLite migration scripts must include:
+SQLite snapshot/export scripts must include:
 - `swap_windows.effective_match_id`
 - `user_swaps.is_frozen`
 - `user_swaps.frozen_at`
@@ -198,7 +198,7 @@ PostgreSQL and SQLite migration scripts must include:
 - `user_swaps.validated_at`
 - `user_swaps.validated_by`
 
-Legacy databases with a not-null `user_swaps.effective_match_id` must be migrated to remove the requirement or provide a compatible nullable/default value.
+Legacy databases with a not-null `user_swaps.effective_match_id` must be updated to remove the requirement or provide a compatible nullable/default value.
 
 ## Non-Goals
 - Do not update `user_players` when users swap.

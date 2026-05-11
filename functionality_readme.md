@@ -293,5 +293,5 @@ Compatibility store keys:
 ## 19. Deployment
 - App is Dockerized with a multi-stage Dockerfile.
 - Azure App Service deployment assets are in `deploy/azure/`.
-- PostgreSQL is the recommended production database.
-- SQLite migration scripts are maintained for backup/offline portability.
+- SQLite is the default database for local and sample deployment flows in this repo.
+- SQLite snapshot scripts are maintained for backup and portability.

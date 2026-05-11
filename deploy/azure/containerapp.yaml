@@ -26,7 +26,7 @@ properties:
           - name: PORT
             value: "4000"
           - name: DATABASE_URL
-            value: postgresql://<user>:<password>@<host>:5432/<db>?sslmode=require
+            value: sqlite:////app/server/data/ifl.sqlite3
           - name: ADMIN_USERNAME
             value: admin
           - name: ADMIN_PASSWORD

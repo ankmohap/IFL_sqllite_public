@@ -52,6 +52,7 @@ ROOT_DIR = Path(__file__).resolve().parent.parent
 DATABASE_URL = os.getenv("DATABASE_URL", "")
 if not DATABASE_URL:
     DATABASE_URL = f"sqlite:///{ROOT_DIR / 'server' / 'data' / 'ifl.sqlite3'}"
+USING_SQLITE = DATABASE_URL.startswith("sqlite:///")
 PORT = int(os.getenv("PORT", "4000"))
 CLIENT_DIST = ROOT_DIR / "client" / "dist"
 EXPORT_DIR = ROOT_DIR / "server" / "data" / "exports" / "leaderboard"
@@ -319,7 +320,7 @@ def _require_user(authorization: str | None) -> str:
 def init_db():
     Base.metadata.create_all(bind=engine)
     with SessionLocal() as db:
-        _repair_postgres_identity_columns(db)
+        _ensure_identity_columns(db)
         _ensure_user_players_submitted_at(db)
         _ensure_user_players_frozen_at(db)
         _ensure_user_players_is_deleted(db)
@@ -330,7 +331,7 @@ def init_db():
 
 
 def _ensure_user_swaps_columns(db: Session):
-    if DATABASE_URL.startswith("postgresql://"):
+    if not USING_SQLITE:
         cols = {
             r[0]
             for r in db.execute(
@@ -373,7 +374,7 @@ def _ensure_user_swaps_columns(db: Session):
 
 
 def _ensure_swap_windows_columns(db: Session):
-    if DATABASE_URL.startswith("postgresql://"):
+    if not USING_SQLITE:
         cols = {
             r[0]
             for r in db.execute(
@@ -396,8 +397,8 @@ def _ensure_swap_windows_columns(db: Session):
         db.execute(text('ALTER TABLE "swap_windows" ADD COLUMN effective_match_id INTEGER NOT NULL DEFAULT 0'))
 
 
-def _repair_postgres_identity_columns(db: Session):
-    if not DATABASE_URL.startswith("postgresql://"):
+def _ensure_identity_columns(db: Session):
+    if USING_SQLITE:
         return
 
     def _ensure_autoincrement(table: str, col: str):
@@ -437,7 +438,7 @@ def _repair_postgres_identity_columns(db: Session):
 
 
 def _ensure_user_players_submitted_at(db: Session):
-    if DATABASE_URL.startswith("postgresql://"):
+    if not USING_SQLITE:
         row = db.execute(
             text(
                 """
@@ -458,7 +459,7 @@ def _ensure_user_players_submitted_at(db: Session):
 
 
 def _ensure_user_players_is_deleted(db: Session):
-    if DATABASE_URL.startswith("postgresql://"):
+    if not USING_SQLITE:
         row = db.execute(
             text(
                 """
@@ -481,7 +482,7 @@ def _ensure_user_players_is_deleted(db: Session):
 
 
 def _ensure_user_players_frozen_at(db: Session):
-    if DATABASE_URL.startswith("postgresql://"):
+    if not USING_SQLITE:
         row = db.execute(
             text(
                 """

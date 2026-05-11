@@ -3,7 +3,7 @@
 This project is containerized and deployable to Azure as a single image.
 
 Important:
-- FastAPI + PostgreSQL deployment on Azure App Service must run as **Web App for Containers**.
+- FastAPI + SQLite deployment on Azure App Service must run as **Web App for Containers**.
 - Built-in Node/Oryx runtime is not supported for this backend runtime path.
 
 ## Deployment diagram (Azure)
@@ -17,7 +17,7 @@ flowchart LR
   subgraph Azure
     ACR["Azure Container Registry"]
     APP["Azure App Service\nContainer Mode"]
-    PG["Azure Database for PostgreSQL"]
+    DB["SQLite File In App Storage"]
     AOAI["Azure OpenAI"]
     INS["App Insights / Logs (optional)"]
   end
@@ -33,7 +33,7 @@ flowchart LR
 
   SRC --> DOCKER -->|push image| ACR
   ACR -->|pull image| APP
-  APP -->|DATABASE_URL| PG
+  APP -->|DATABASE_URL| DB
   APP -->|AZURE_OPENAI_*| AOAI
   APP -->|CRICBUZZ_RAPIDAPI_*| CB
   APP --> INS
@@ -48,7 +48,7 @@ flowchart LR
 docker build -t ifl-fullstack:latest .
 docker run --rm -p 4000:4000 \
   -e PORT=4000 \
-  -e DATABASE_URL='postgresql://<user>:<password>@<host>:5432/<db>?sslmode=require' \
+  -e DATABASE_URL='sqlite:////home/site/wwwroot/server/data/ifl.sqlite3' \
   -e ADMIN_USERNAME='admin' \
   -e ADMIN_PASSWORD='<strong-admin-password>' \
   -e ADMIN_TOKEN_SECRET='<long-random-secret>' \
@@ -96,7 +96,7 @@ az containerapp create \
   --memory 1Gi \
   --env-vars \
     PORT=4000 \
-    DATABASE_URL='postgresql://<user>:<password>@<host>:5432/<db>?sslmode=require' \
+    DATABASE_URL='sqlite:////app/server/data/ifl.sqlite3' \
     ADMIN_USERNAME=admin \
     ADMIN_PASSWORD='<strong-admin-password>' \
     ADMIN_TOKEN_SECRET='<long-random-secret>' \
@@ -125,7 +125,7 @@ az webapp create -g $RG -p $PLAN -n $APP \
 az webapp config appsettings set -g $RG -n $APP --settings \
   WEBSITES_PORT=4000 \
   PORT=4000 \
-  DATABASE_URL='postgresql://<user>:<password>@<host>:5432/<db>?sslmode=require' \
+  DATABASE_URL='sqlite:////home/site/wwwroot/server/data/ifl.sqlite3' \
   ADMIN_USERNAME=admin \
   ADMIN_PASSWORD='<strong-admin-password>' \
   ADMIN_TOKEN_SECRET='<long-random-secret>' \
@@ -176,7 +176,7 @@ az webapp config container set \
 az webapp config appsettings set -g $RG -n $APP --settings \
   WEBSITES_PORT=4000 \
   PORT=4000 \
-  DATABASE_URL='postgresql://<user>:<password>@<host>:5432/<db>?sslmode=require' \
+  DATABASE_URL='sqlite:////home/site/wwwroot/server/data/ifl.sqlite3' \
   ADMIN_USERNAME=admin \
   ADMIN_PASSWORD='<strong-admin-password>' \
   ADMIN_TOKEN_SECRET='<long-random-secret>' \
@@ -198,3 +198,4 @@ az webapp log tail -g $RG -n $APP
 - Admin AI scoring now resolves a Cricbuzz match id from the static 2026 map, fetches the scorecard JSON from RapidAPI, and then generates the import draft through Azure OpenAI.
 - Use plain ASCII quotes in shell commands. Curly quotes around secrets can cause runtime login failures.
 - Image startup installs Python dependencies from `server/requirements.txt` (including `SQLAlchemy`), so keep that file in sync with backend imports.
+- For persistent production use, mount durable storage for the SQLite file path instead of relying on ephemeral container filesystem state.

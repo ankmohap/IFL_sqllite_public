@@ -1,0 +1,14 @@
+{
+  "name": "ifl-fullstack",
+  "private": true,
+  "version": "1.0.0",
+  "workspaces": [
+    "client"
+  ],
+  "scripts": {
+    "dev:client": "npm --workspace client run dev",
+    "dev:server": "python3 -m server.app",
+    "build": "npm --workspace client run build",
+    "start": "python3 -m ensurepip --upgrade && python3 -m pip install --disable-pip-version-check --target=/home/site/wwwroot/.python_packages/lib/site-packages -r server/requirements.txt && PYTHONPATH=/home/site/wwwroot/.python_packages/lib/site-packages python3 -m server.app"
+  }
+}

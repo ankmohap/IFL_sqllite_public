@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IFL 2026 User Manual</title>
+  <style>
+    :root {
+      --bg0: #07111f;
+      --bg1: #10233d;
+      --card: rgba(255, 255, 255, 0.09);
+      --line: rgba(180, 205, 235, 0.22);
+      --txt: #f4f8ff;
+      --muted: #b9c8da;
+      --accent: #7dd3fc;
+      --gold: #f7c948;
+      --green: #34d399;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", "Trebuchet MS", Arial, sans-serif;
+      color: var(--txt);
+      background:
+        radial-gradient(900px 420px at 92% 2%, rgba(125, 211, 252, 0.20), transparent 60%),
+        radial-gradient(760px 380px at 8% 18%, rgba(247, 201, 72, 0.16), transparent 55%),
+        linear-gradient(150deg, var(--bg0), var(--bg1));
+      min-height: 100vh;
+    }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 28px 16px 56px; }
+    .hero, .card {
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: var(--card);
+      box-shadow: 0 20px 48px rgba(0, 0, 0, 0.25);
+      backdrop-filter: blur(10px);
+    }
+    .hero { padding: 28px; margin-bottom: 16px; }
+    .eyebrow {
+      display: inline-flex;
+      padding: 6px 11px;
+      border-radius: 999px;
+      background: rgba(125, 211, 252, 0.13);
+      border: 1px solid rgba(125, 211, 252, 0.35);
+      color: #d7f3ff;
+      font-size: 12px;
+      letter-spacing: 0.11em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+    h1 { margin: 0; font-size: clamp(31px, 5vw, 54px); line-height: 1; }
+    h2 { margin: 0 0 10px; font-size: 23px; }
+    p { color: var(--muted); line-height: 1.55; }
+    .sub { margin: 10px 0 0; max-width: 780px; }
+    .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+    .card { padding: 18px; }
+    ol, ul { margin: 0 0 0 20px; padding: 0; }
+    li { margin: 7px 0; color: #eaf1fb; line-height: 1.45; }
+    .toc { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+    .toc a, .pill {
+      color: #eaf7ff;
+      text-decoration: none;
+      border: 1px solid rgba(255, 255, 255, 0.17);
+      background: rgba(255, 255, 255, 0.07);
+      padding: 7px 10px;
+      border-radius: 999px;
+      font-size: 13px;
+    }
+    .toc a:hover { border-color: rgba(125, 211, 252, 0.65); }
+    .note {
+      border-left: 4px solid var(--gold);
+      padding: 10px 12px;
+      border-radius: 12px;
+      background: rgba(247, 201, 72, 0.10);
+      color: #fff5c7;
+      margin-top: 12px;
+    }
+    .good { color: var(--green); }
+    .accent { color: var(--accent); }
+    @media (max-width: 760px) {
+      .grid { grid-template-columns: 1fr; }
+      .hero { padding: 20px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <section class="hero">
+      <div class="eyebrow">IFL 2026</div>
+      <h1>User Manual</h1>
+      <p class="sub">A practical guide for Guest Demo, predictions, playoffs picks, Today's Edge, Super Swapper, My Team, Frozen Squads, Leaderboard, Rules, and Profile.</p>
+      <nav class="toc">
+        <a href="#login">Login</a>
+        <a href="#guest">Guest Demo</a>
+        <a href="#predictions">Predictions</a>
+        <a href="#playoffs">Playoffs</a>
+        <a href="#edge">Today's Edge</a>
+        <a href="#team">My Team</a>
+        <a href="#swap">Super Swapper</a>
+        <a href="#squads">Frozen Squads</a>
+        <a href="#leaderboard">Leaderboard</a>
+        <a href="#profile">Profile</a>
+      </nav>
+    </section>
+
+    <section class="grid">
+      <article class="card" id="login">
+        <h2>1. Login / Register</h2>
+        <ol>
+          <li>Open the IFL app URL.</li>
+          <li>Login with phone number and password.</li>
+          <li>New users register with team name, phone number, and password.</li>
+          <li>Your phone number must be allowed by admin.</li>
+        </ol>
+      </article>
+
+      <article class="card" id="guest">
+        <h2>Guest Demo</h2>
+        <ul>
+          <li>Use <strong>Guest Demo</strong> from the public home page to explore IFL without joining.</li>
+          <li>Guest Demo uses dummy data only and does not save predictions, swaps, or team details.</li>
+          <li>It includes simulated Home, Predictions, Today's Edge, My Team, Super Swapper, Playoffs, Rules, and Profile screens.</li>
+          <li>Guest Home includes a demo leader highlighter and demo leaderboard movement.</li>
+        </ul>
+      </article>
+
+      <article class="card" id="predictions">
+        <h2>2. Predictions</h2>
+        <ol>
+          <li>Open <strong>Predictions</strong>.</li>
+          <li>Select your winner for each unlocked match.</li>
+          <li>Edit before the prediction lock time.</li>
+          <li>Correct winner gives <strong>50 points</strong>.</li>
+        </ol>
+        <div class="note">If admin marks a match as no result, prediction points are 0 for everyone.</div>
+      </article>
+
+      <article class="card" id="playoffs">
+        <h2>3. Playoffs Prediction</h2>
+        <ol>
+          <li>Open <strong>Playoffs Prediction</strong>.</li>
+          <li>Pick 4 likely playoff teams.</li>
+          <li>Save while the window is open.</li>
+          <li>Use reset to clear and repick before the window closes.</li>
+        </ol>
+      </article>
+
+      <article class="card" id="edge">
+        <h2>4. Today's Edge</h2>
+        <ul>
+          <li>See daily match and leaderboard context.</li>
+          <li>Review what can change today.</li>
+          <li>Use <strong>Galgotias Insight Box</strong> for button-based insights.</li>
+          <li>Check rank gaps, active players, unique/differential indicators, and leverage snapshot.</li>
+        </ul>
+      </article>
+
+      <article class="card" id="team">
+        <h2>5. My Team</h2>
+        <ul>
+          <li>View your current effective squad.</li>
+          <li>Player cards show archetype avatars such as Run Machine, Wicket Hunter, Chaos Pick, Clutch Finisher, and Dark Horse.</li>
+          <li>Hover on desktop or tap on mobile to flip cards and view accumulated player points.</li>
+          <li>On mobile, flipped cards automatically return after 3 seconds.</li>
+          <li>Check match-wise player points and prediction contribution.</li>
+          <li>Review swapped player frozen points after swaps become effective.</li>
+        </ul>
+      </article>
+
+      <article class="card" id="swap">
+        <h2>6. Super Swapper</h2>
+        <ol>
+          <li>Select 1 to 3 players from current squad as swap out.</li>
+          <li>Select the same number from player pool as swap in.</li>
+          <li>Use search, team, role, Indian/International filters, and point sorting.</li>
+          <li>Check validation summary.</li>
+          <li>Click <strong>Submit Swaps</strong>, then <strong>Freeze Swaps</strong> when final.</li>
+        </ol>
+        <div class="note">Final squad must stay at 20 players, minimum 6 bowlers, maximum 8 international players.</div>
+      </article>
+
+      <article class="card" id="squads">
+        <h2>7. Frozen Squads</h2>
+        <ul>
+          <li>View other available user squads.</li>
+          <li>Squads reflect latest effective swaps.</li>
+        </ul>
+      </article>
+
+      <article class="card" id="leaderboard">
+        <h2>8. Leaderboard</h2>
+        <ul>
+          <li>Track rank, last earned points, total points, and prediction points.</li>
+          <li>Rank arrows show movement versus previous snapshot.</li>
+          <li>Gap insights highlight major differences between adjacent ranks.</li>
+          <li>The logged-in Home page also shows a current leader spotlight with a rotating pedestal and leader logo.</li>
+          <li>The Home leaderboard preview auto-scrolls when enough ranks are available.</li>
+        </ul>
+      </article>
+
+      <article class="card" id="rules">
+        <h2>9. Rules</h2>
+        <ul>
+          <li>Open <strong>Rules</strong> for squad, prediction, scoring, and swap rules.</li>
+          <li>Runout and stumping use the same points bucket.</li>
+        </ul>
+      </article>
+
+      <article class="card" id="profile">
+        <h2>10. Profile</h2>
+        <ul>
+          <li>View account and team summary.</li>
+          <li>Upload a team logo in PNG, JPG, or WEBP format.</li>
+          <li>Use a square image under 2 MB for best results.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="card" style="margin-top:14px;">
+      <h2>Quick Troubleshooting</h2>
+      <ul>
+        <li>Cannot login: confirm your phone number is allowed and password is correct.</li>
+        <li>Cannot predict: the match prediction window may be locked.</li>
+        <li>Cannot submit swaps: check active window, number of swaps, bowler count, and international count.</li>
+        <li>Swap not visible in current squad: the effective match may not have been reached yet.</li>
+        <li>Points not updated: wait until admin publishes scoring.</li>
+        <li>Guest Demo changes not saved: this is expected because Guest Demo is read-only.</li>
+      </ul>
+      <p><span class="pill good">Tip</span> Super Swapper changes are reflected through effective squad logic, not by editing your original squad.</p>
+    </section>
+  </main>
+</body>
+</html>

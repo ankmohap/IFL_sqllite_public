@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/df3eaa0a-ebcd-41d0-ab32-f6f721a562bb/resourceGroups/appsvc_linux_centralindia_basic/providers/Microsoft.Web/sites/IFL",
+    "appService.deploySubpath": "."
+}

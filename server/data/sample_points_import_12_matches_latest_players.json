@@ -1,0 +1,1088 @@
+{
+  "version": 1,
+  "generated_at": "2026-03-07T07:09:11.749730Z",
+  "source": "/Users/ankitmohapatra/Desktop/IFL/server/data/ifl.sqlite3",
+  "description": "Sample score imports generated from latest SQLite master players + matches.",
+  "matchImports": {
+    "1": {
+      "winner": "RCB",
+      "motm": "Jacob Bethell",
+      "players": [
+        {
+          "name": "Gurjapneet Singh",
+          "runs": 7,
+          "catches": 1,
+          "runouts": 0,
+          "wickets": 4
+        },
+        {
+          "name": "Nathan Ellis",
+          "runs": 3,
+          "catches": 0,
+          "runouts": 0,
+          "wickets": 0
+        },
+        {
+          "name": "Ramakrishna Ghosh",
+          "runs": 25,
+          "catches": 0,
+          "runouts": 0,
+          "wickets": 2
+        },
+        {
+          "name": "Dewald Brevis",
+          "runs": 28,
+          "catches": 0,
+          "runouts": 1,
+          "wickets": 1
+        },
+        {
+          "name": "Noor Ahmad",
+          "runs": 5,
+          "catches": 0,
+          "runouts": 0,
+          "wickets": 3
+        },
+        {
+          "name": "Shreyas Gopal",
+          "runs": 10,
+          "catches": 3,
+          "runouts": 0,
+          "wickets": 0
+        },
+        {
+          "name": "Romario Shepherd",
+          "runs": 35,
+          "catches": 0,
+          "runouts": 0,
+          "wickets": 0
+        },
+        {
+          "name": "Bhuvneshwar Kumar",
+          "runs": 9,
+          "catches": 1,
+          "runouts": 0,
+          "wickets": 1
+        },
+        {
+          "name": "Jacob Bethell",
+          "runs": 80,
+          "catches": 0,
+          "runouts": 0,
+          "wickets": 2
+        },
+        {
+          "name": "Jitesh Sharma",
+          "runs": 35,
+          "catches": 2,
+          "runouts": 1,
+          "wickets": 0
+        },
+        {
+          "name": "Rasikh Dar",
+          "runs": 1,
+          "catches": 0,
+          "runouts": 1,
+          "wickets": 2
+        },
+        {
+          "name": "Jordan Cox",
+          "runs": 35,
+          "catches": 0,
+          "runouts": 0,
+          "wickets": 0
+        }
+      ]
+    },
+    "2": {
+      "winner": "SRH",
+      "motm": "Nitish Kumar Reddy",
+      "players": [
+        {
+          "name": "Umran Malik",
+          "runs": 2,
+          "catches": 0,
+          "runouts": 0,
+          "wickets": 0
+        },
+        {
+          "name": "Finn Allen",
+          "runs": 65,
+          "catches": 0,
+          "runouts": 0,
+          "wickets": 0
+        },
+        {
+          "name": "Varun Chakaravarthy",
+          "runs": 0,
+          "catches": 0,
+          "runouts": 0,
+          "wickets": 1
+        },
+        {
+          "name": "Angkrish Raghuvanshi",
+          "runs": 40,
+          "catches": 0,
+          "runouts": 0,
+          "wickets": 0
+        },
+        {
+          "name": "Vaibhav Arora",
+          "runs": 0,
+          "catches": 0,
+          "runouts": 0,
+          "wickets": 0
+        },
+        {
+          "name": "Sunil Narine",
+          "runs": 14,
+          "catches": 0,
+          "runouts": 0,
+          "wickets": 3
+        },
+        {
+          "name": "Eshan Malinga",
+          "runs": 15,
+          "catches": 1,
+          "runouts": 0,
+          "wickets": 2
+        },
+        {
+          "name": "Pat Cummins",
+          "runs": 7,
+          "catches": 0,
+          "runouts": 0,
+          "wickets": 0
+        },
+        {
+          "name": "Nitish Kumar Reddy",
+          "runs": 15,
+          "catches": 0,
+          "runouts": 0,
+          "wickets": 3
+        },
+        {
+          "name": "Praful Hinge",
+          "runs": 0,
+          "catches": 1,
+          "runouts": 0,
+          "wickets": 3
+        },
+        {
+          "name": "Travis Head",
+          "runs": 40,
+          "catches": 1,
+          "runouts": 0,
+          "wickets": 0
+        },
+        {
+          "name": "Krains Fultera",
+          "runs": 15,
+          "catches": 1,
+          "runouts": 0,
+          "wickets": 2
+        }
+      ]
+    },
+    "3": {
+      "winner": "MI",
+      "motm": "T Natarajan",
+      "players": [
+        {
+          "name": "Tilak Varma",
+          "runs": 28,
+          "catches": 0,
+          "runouts": 0,
+          "wickets": 0
+        },
+        {
+          "name": "Deepak Chahar",
+          "runs": 13,
+          "catches": 0,
+          "runouts": 0,
+          "wickets": 1
+        },
+        {
+          "name": "Mitchell Santner",
+          "runs": 8,
+          "catches": 1,
+          "runouts": 0,
+          "wickets": 0
+        },
+        {
+          "name": "Rohit Sharma",
+          "runs": 4,
+          "catches": 0,
+          "runouts": 1,
+          "wickets": 0
+        },
+        {
+          "name": "Quinton De Kock",
+          "runs": 48,
+          "catches": 0,
+          "runouts": 0,
+          "wickets": 0
+        },
+        {
+          "name": "Corbin Bosch",
+          "runs": 35,
+          "catches": 1,
+          "runouts": 1,
+          "wickets": 1
+        },
+        {
+          "name": "Vipraj Nigam",
+          "runs": 45,
+          "catches": 0,
+          "runouts": 1,
+          "wickets": 2
+        },
+        {
+          "name": "Lungisani Ngidi",
+          "runs": 6,
+          "catches": 0,
+          "runouts": 0,
+          "wickets": 1
+        },
+        {
+          "name": "T Natarajan",
+          "runs": 13,
+          "catches": 0,
+          "runouts": 0,
+          "wickets": 3
+        },
+        {
+          "name": "Dushmantha Chameera",
+          "runs": 2,
+          "catches": 0,
+          "runouts": 0,
+          "wickets": 1
+        },
+        {
+          "name": "Tristan Stubbs",
+          "runs": 35,
+          "catches": 0,
+          "runouts": 0,
+          "wickets": 0
+        },
+        {
+          "name": "Auqib Dar",
+          "runs": 15,
+          "catches": 0,
+          "runouts": 0,
+          "wickets": 0
+        }
+      ]
+    },
+    "4": {
+      "winner": "KXIP",
+      "motm": "Azmatullah Omarzai",
+      "players": [
+        {
+          "name": "Kwena Maphaka",
+          "runs": 2,
+          "catches": 0,
+          "runouts": 0,
+          "wickets": 4
+        },
+        {
+          "name": "Ravi Vishnoi",
+          "runs": 9,
+          "catches": 1,
+          "runouts": 0,
+          "wickets": 1
+        },
+        {
+          "name": "Aman Rao Perala",
+          "runs": 55,
+          "catches": 1,
+          "runouts": 0,
+          "wickets": 0
+        },
+        {
+          "name": "Yashasvi Jaiswal",
+          "runs": 4,
+          "catches": 0,
+          "runouts": 0,
+          "wickets": 0
+        },
+        {
+          "name": "Sam Curran",
+          "runs": 35,
+          "catches": 0,
+          "runouts": 0,
+          "wickets": 1
+        },
+        {
+          "name": "Jofra Archer",
+          "runs": 10,
+          "catches": 1,
+          "runouts": 0,
+          "wickets": 3
+        },
+        {
+          "name": "Azmatullah Omarzai",
+          "runs": 60,
+          "catches": 0,
+          "runouts": 0,
+          "wickets": 3
+        },
+        {
+          "name": "Prabhsimran Singh",
+          "runs": 0,
+          "catches": 0,
+          "runouts": 0,
+          "wickets": 0
+        },
+        {
+          "name": "Vijaykumar Vyshak",
+          "runs": 2,
+          "catches": 0,
+          "runouts": 0,
+          "wickets": 0
+        },
+        {
+          "name": "Nehal Wadhera",
+          "runs": 18,
+          "catches": 1,
+          "runouts": 0,
+          "wickets": 0
+        },
+        {
+          "name": "Praveen Dubey",
+          "runs": 0,
+          "catches": 1,
+          "runouts": 0,
+          "wickets": 2
+        },
+        {
+          "name": "Pyla Avinash",
+          "runs": 28,
+          "catches": 0,
+          "runouts": 0,
+          "wickets": 0
+        }
+      ]
+    },
+    "5": {
+      "winner": "RCB",
+      "motm": "Satvik Deswal",
+      "players": [
+        {
+          "name": "Abhinandan Singh",
+          "runs": 8,
+          "catches": 1,
+          "runouts": 0,
+          "wickets": 1
+        },
+        {
+          "name": "Kanishk Chouhan",
+          "runs": 15,
+          "catches": 0,
+          "runouts": 0,
+          "wickets": 0
+        },
+        {
+          "name": "Phil Salt",
+          "runs": 85,
+          "catches": 0,
+          "runouts": 1,
+          "wickets": 0
+        },
+        {
+          "name": "Suyash Sharma",
+          "runs": 7,
+          "catches": 0,
+          "runouts": 1,
+          "wickets": 2
+        },
+        {
+          "name": "Satvik Deswal",
+          "runs": 80,
+          "catches": 0,
+          "runouts": 0,
+          "wickets": 1
+        },
+        {
+          "name": "Yash Dayal",
+          "runs": 13,
+          "catches": 1,
+          "runouts": 1,
+          "wickets": 1
+        },
+        {
+          "name": "Rohit Sharma",
+          "runs": 0,
+          "catches": 0,
+          "runouts": 0,
+          "wickets": 0
+        },
+        {
+          "name": "Atharva Ankolekar",
+          "runs": 60,
+          "catches": 2,
+          "runouts": 0,
+          "wickets": 2
+        },
+        {
+          "name": "Raghu Sharma",
+          "runs": 10,
+          "catches": 2,
+          "runouts": 0,
+          "wickets": 2
+        },
+        {
+          "name": "Sherfane Rutherford",
+          "runs": 40,
+          "catches": 1,
+          "runouts": 0,
+          "wickets": 0
+        },
+        {
+          "name": "Quinton De Kock",
+          "runs": 35,
+          "catches": 0,
+          "runouts": 1,
+          "wickets": 0
+        },
+        {
+          "name": "Danish Malewar",
+          "runs": 40,
+          "catches": 1,
+          "runouts": 0,
+          "wickets": 0
+        }
+      ]
+    },
+    "6": {
+      "winner": "DC",
+      "motm": "Nitish Rana",
+      "players": [
+        {
+          "name": "Nitish Rana",
+          "runs": 80,
+          "catches": 1,
+          "runouts": 0,
+          "wickets": 1
+        },
+        {
+          "name": "Abishek Porel",
+          "runs": 85,
+          "catches": 1,
+          "runouts": 0,
+          "wickets": 0
+        },
+        {
+          "name": "Prithvi Shaw",
+          "runs": 10,
+          "catches": 0,
+          "runouts": 0,
+          "wickets": 0
+        },
+        {
+          "name": "Dushmantha Chameera",
+          "runs": 13,
+          "catches": 0,
+          "runouts": 0,
+          "wickets": 2
+        },
+        {
+          "name": "Mitchell Starc",
+          "runs": 1,
+          "catches": 1,
+          "runouts": 0,
+          "wickets": 4
+        },
+        {
+          "name": "Vipraj Nigam",
+          "runs": 45,
+          "catches": 0,
+          "runouts": 0,
+          "wickets": 3
+        },
+        {
+          "name": "Rahul Chahar",
+          "runs": 16,
+          "catches": 1,
+          "runouts": 0,
+          "wickets": 1
+        },
+        {
+          "name": "Dewald Brevis",
+          "runs": 40,
+          "catches": 2,
+          "runouts": 0,
+          "wickets": 0
+        },
+        {
+          "name": "Gurjapneet Singh",
+          "runs": 7,
+          "catches": 0,
+          "runouts": 0,
+          "wickets": 0
+        },
+        {
+          "name": "Matt Henry",
+          "runs": 2,
+          "catches": 1,
+          "runouts": 0,
+          "wickets": 2
+        },
+        {
+          "name": "Anshul Kamboj",
+          "runs": 60,
+          "catches": 1,
+          "runouts": 0,
+          "wickets": 0
+        },
+        {
+          "name": "Nathan Ellis",
+          "runs": 7,
+          "catches": 1,
+          "runouts": 1,
+          "wickets": 2
+        }
+      ]
+    },
+    "7": {
+      "winner": "SRH",
+      "motm": "Aman Rao Perala",
+      "players": [
+        {
+          "name": "Zeeshan Ansari",
+          "runs": 16,
+          "catches": 0,
+          "runouts": 0,
+          "wickets": 0
+        },
+        {
+          "name": "Abhishek Sharma",
+          "runs": 25,
+          "catches": 1,
+          "runouts": 0,
+          "wickets": 1
+        },
+        {
+          "name": "Kamindu Mendis",
+          "runs": 15,
+          "catches": 0,
+          "runouts": 0,
+          "wickets": 3
+        },
+        {
+          "name": "Amit Kumar",
+          "runs": 16,
+          "catches": 0,
+          "runouts": 1,
+          "wickets": 1
+        },
+        {
+          "name": "Ishan Kishan",
+          "runs": 5,
+          "catches": 1,
+          "runouts": 0,
+          "wickets": 0
+        },
+        {
+          "name": "Eshan Malinga",
+          "runs": 13,
+          "catches": 0,
+          "runouts": 0,
+          "wickets": 0
+        },
+        {
+          "name": "Donovan Ferreira",
+          "runs": 48,
+          "catches": 2,
+          "runouts": 0,
+          "wickets": 0
+        },
+        {
+          "name": "Yashasvi Jaiswal",
+          "runs": 10,
+          "catches": 0,
+          "runouts": 0,
+          "wickets": 0
+        },
+        {
+          "name": "Aman Rao Perala",
+          "runs": 112,
+          "catches": 0,
+          "runouts": 0,
+          "wickets": 0
+        },
+        {
+          "name": "Tushar Deshpande",
+          "runs": 1,
+          "catches": 0,
+          "runouts": 0,
+          "wickets": 1
+        },
+        {
+          "name": "Sushant Mishra",
+          "runs": 12,
+          "catches": 3,
+          "runouts": 0,
+          "wickets": 0
+        },
+        {
+          "name": "Dhruv Jurel",
+          "runs": 22,
+          "catches": 0,
+          "runouts": 0,
+          "wickets": 0
+        }
+      ]
+    },
+    "8": {
+      "winner": "KKR",
+      "motm": "Vaibhav Arora",
+      "players": [
+        {
+          "name": "Yash Thakur",
+          "runs": 15,
+          "catches": 0,
+          "runouts": 1,
+          "wickets": 0
+        },
+        {
+          "name": "Ben Dwarshuis",
+          "runs": 35,
+          "catches": 1,
+          "runouts": 0,
+          "wickets": 0
+        },
+        {
+          "name": "Nehal Wadhera",
+          "runs": 55,
+          "catches": 0,
+          "runouts": 0,
+          "wickets": 0
+        },
+        {
+          "name": "Musheer Khan",
+          "runs": 8,
+          "catches": 0,
+          "runouts": 0,
+          "wickets": 3
+        },
+        {
+          "name": "Arshdeep Singh",
+          "runs": 18,
+          "catches": 1,
+          "runouts": 0,
+          "wickets": 1
+        },
+        {
+          "name": "Pyla Avinash",
+          "runs": 55,
+          "catches": 1,
+          "runouts": 1,
+          "wickets": 0
+        },
+        {
+          "name": "Varun Chakaravarthy",
+          "runs": 2,
+          "catches": 1,
+          "runouts": 0,
+          "wickets": 0
+        },
+        {
+          "name": "Matheesa Pathirana",
+          "runs": 12,
+          "catches": 1,
+          "runouts": 0,
+          "wickets": 1
+        },
+        {
+          "name": "Manish Pandey",
+          "runs": 28,
+          "catches": 0,
+          "runouts": 0,
+          "wickets": 0
+        },
+        {
+          "name": "Vaibhav Arora",
+          "runs": 6,
+          "catches": 1,
+          "runouts": 0,
+          "wickets": 4
+        },
+        {
+          "name": "Finn Allen",
+          "runs": 65,
+          "catches": 0,
+          "runouts": 0,
+          "wickets": 0
+        },
+        {
+          "name": "Tejasvi Singh",
+          "runs": 5,
+          "catches": 0,
+          "runouts": 0,
+          "wickets": 0
+        }
+      ]
+    },
+    "9": {
+      "winner": "CSK",
+      "motm": "Shardul Thakur",
+      "players": [
+        {
+          "name": "Akeal Hosein",
+          "runs": 13,
+          "catches": 0,
+          "runouts": 0,
+          "wickets": 0
+        },
+        {
+          "name": "Mukesh Choudhary",
+          "runs": 4,
+          "catches": 1,
+          "runouts": 0,
+          "wickets": 4
+        },
+        {
+          "name": "Ayush Mhatre",
+          "runs": 40,
+          "catches": 0,
+          "runouts": 0,
+          "wickets": 0
+        },
+        {
+          "name": "Gurjapneet Singh",
+          "runs": 15,
+          "catches": 0,
+          "runouts": 0,
+          "wickets": 1
+        },
+        {
+          "name": "Anshul Kamboj",
+          "runs": 35,
+          "catches": 1,
+          "runouts": 0,
+          "wickets": 2
+        },
+        {
+          "name": "Mathew Short",
+          "runs": 0,
+          "catches": 0,
+          "runouts": 0,
+          "wickets": 2
+        },
+        {
+          "name": "Naman Dhir",
+          "runs": 25,
+          "catches": 2,
+          "runouts": 0,
+          "wickets": 1
+        },
+        {
+          "name": "Jasprit Bumrah",
+          "runs": 5,
+          "catches": 0,
+          "runouts": 0,
+          "wickets": 4
+        },
+        {
+          "name": "Deepak Chahar",
+          "runs": 9,
+          "catches": 0,
+          "runouts": 0,
+          "wickets": 0
+        },
+        {
+          "name": "Shardul Thakur",
+          "runs": 60,
+          "catches": 0,
+          "runouts": 0,
+          "wickets": 2
+        },
+        {
+          "name": "Trent Boult",
+          "runs": 6,
+          "catches": 0,
+          "runouts": 0,
+          "wickets": 4
+        },
+        {
+          "name": "Rohit Sharma",
+          "runs": 72,
+          "catches": 0,
+          "runouts": 0,
+          "wickets": 0
+        }
+      ]
+    },
+    "10": {
+      "winner": "DC",
+      "motm": "Lungisani Ngidi",
+      "players": [
+        {
+          "name": "KL Rahul",
+          "runs": 12,
+          "catches": 0,
+          "runouts": 0,
+          "wickets": 0
+        },
+        {
+          "name": "Lungisani Ngidi",
+          "runs": 17,
+          "catches": 0,
+          "runouts": 0,
+          "wickets": 3
+        },
+        {
+          "name": "Kuldeep Yadav",
+          "runs": 14,
+          "catches": 2,
+          "runouts": 0,
+          "wickets": 2
+        },
+        {
+          "name": "Nitish Rana",
+          "runs": 35,
+          "catches": 1,
+          "runouts": 0,
+          "wickets": 0
+        },
+        {
+          "name": "Sameer Rizvi",
+          "runs": 15,
+          "catches": 0,
+          "runouts": 0,
+          "wickets": 1
+        },
+        {
+          "name": "Prithvi Shaw",
+          "runs": 18,
+          "catches": 0,
+          "runouts": 0,
+          "wickets": 0
+        },
+        {
+          "name": "Ishan Kishan",
+          "runs": 48,
+          "catches": 0,
+          "runouts": 0,
+          "wickets": 0
+        },
+        {
+          "name": "Kamindu Mendis",
+          "runs": 45,
+          "catches": 0,
+          "runouts": 1,
+          "wickets": 0
+        },
+        {
+          "name": "Sakib Hussain",
+          "runs": 10,
+          "catches": 0,
+          "runouts": 0,
+          "wickets": 2
+        },
+        {
+          "name": "Heinrich Klaasen",
+          "runs": 65,
+          "catches": 0,
+          "runouts": 0,
+          "wickets": 0
+        },
+        {
+          "name": "Harsh Dubey",
+          "runs": 35,
+          "catches": 2,
+          "runouts": 0,
+          "wickets": 1
+        },
+        {
+          "name": "Shivang Kumar",
+          "runs": 25,
+          "catches": 1,
+          "runouts": 0,
+          "wickets": 2
+        }
+      ]
+    },
+    "11": {
+      "winner": "RCB",
+      "motm": "Jacob Bethell",
+      "players": [
+        {
+          "name": "Tim David",
+          "runs": 8,
+          "catches": 1,
+          "runouts": 0,
+          "wickets": 1
+        },
+        {
+          "name": "Jacob Bethell",
+          "runs": 25,
+          "catches": 0,
+          "runouts": 1,
+          "wickets": 3
+        },
+        {
+          "name": "Jacob Duffy",
+          "runs": 0,
+          "catches": 1,
+          "runouts": 0,
+          "wickets": 2
+        },
+        {
+          "name": "Vihaan Malhotra",
+          "runs": 25,
+          "catches": 1,
+          "runouts": 0,
+          "wickets": 2
+        },
+        {
+          "name": "Phil Salt",
+          "runs": 22,
+          "catches": 1,
+          "runouts": 0,
+          "wickets": 0
+        },
+        {
+          "name": "Abhinandan Singh",
+          "runs": 10,
+          "catches": 3,
+          "runouts": 0,
+          "wickets": 2
+        },
+        {
+          "name": "Cameron Green",
+          "runs": 4,
+          "catches": 0,
+          "runouts": 0,
+          "wickets": 0
+        },
+        {
+          "name": "Rinku Singh",
+          "runs": 55,
+          "catches": 0,
+          "runouts": 0,
+          "wickets": 0
+        },
+        {
+          "name": "Manish Pandey",
+          "runs": 72,
+          "catches": 2,
+          "runouts": 0,
+          "wickets": 0
+        },
+        {
+          "name": "Rovman Powell",
+          "runs": 10,
+          "catches": 0,
+          "runouts": 0,
+          "wickets": 0
+        },
+        {
+          "name": "Angkrish Raghuvanshi",
+          "runs": 28,
+          "catches": 0,
+          "runouts": 1,
+          "wickets": 0
+        },
+        {
+          "name": "Ramandeep Singh",
+          "runs": 45,
+          "catches": 1,
+          "runouts": 0,
+          "wickets": 2
+        }
+      ]
+    },
+    "12": {
+      "winner": "RR",
+      "motm": "Robin Minz",
+      "players": [
+        {
+          "name": "Brijesh Sharma",
+          "runs": 4,
+          "catches": 0,
+          "runouts": 0,
+          "wickets": 3
+        },
+        {
+          "name": "Adam Milne",
+          "runs": 15,
+          "catches": 0,
+          "runouts": 0,
+          "wickets": 3
+        },
+        {
+          "name": "Jofra Archer",
+          "runs": 0,
+          "catches": 0,
+          "runouts": 0,
+          "wickets": 3
+        },
+        {
+          "name": "Vaibhav Suryavanshi",
+          "runs": 55,
+          "catches": 0,
+          "runouts": 0,
+          "wickets": 0
+        },
+        {
+          "name": "Sam Curran",
+          "runs": 45,
+          "catches": 1,
+          "runouts": 0,
+          "wickets": 1
+        },
+        {
+          "name": "Yash Raj Punja",
+          "runs": 0,
+          "catches": 0,
+          "runouts": 0,
+          "wickets": 1
+        },
+        {
+          "name": "Will Jacks",
+          "runs": 45,
+          "catches": 0,
+          "runouts": 0,
+          "wickets": 0
+        },
+        {
+          "name": "Robin Minz",
+          "runs": 65,
+          "catches": 3,
+          "runouts": 0,
+          "wickets": 0
+        },
+        {
+          "name": "Mitchell Santner",
+          "runs": 35,
+          "catches": 1,
+          "runouts": 0,
+          "wickets": 1
+        },
+        {
+          "name": "Mayank Markande",
+          "runs": 14,
+          "catches": 0,
+          "runouts": 0,
+          "wickets": 2
+        },
+        {
+          "name": "Corbin Bosch",
+          "runs": 35,
+          "catches": 1,
+          "runouts": 0,
+          "wickets": 1
+        },
+        {
+          "name": "Raj Angad Bawa",
+          "runs": 60,
+          "catches": 0,
+          "runouts": 0,
+          "wickets": 0
+        }
+      ]
+    }
+  }
+}

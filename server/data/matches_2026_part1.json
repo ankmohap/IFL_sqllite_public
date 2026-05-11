@@ -1,0 +1,702 @@
+[
+  {
+    "id": 1,
+    "date": "2026-03-28 19:30",
+    "teamA": "Royal Challengers Bengaluru",
+    "teamAabbr": "RCB",
+    "teamB": "Sunrisers Hyderabad",
+    "teamBabbr": "SRH",
+    "venue": "Bengaluru",
+    "winner": ""
+  },
+  {
+    "id": 2,
+    "date": "2026-03-29 19:30",
+    "teamA": "Mumbai Indians",
+    "teamAabbr": "MI",
+    "teamB": "Kolkata Knight Riders",
+    "teamBabbr": "KKR",
+    "venue": "Mumbai",
+    "winner": ""
+  },
+  {
+    "id": 3,
+    "date": "2026-03-30 19:30",
+    "teamA": "Rajasthan Royals",
+    "teamAabbr": "RR",
+    "teamB": "Chennai Super Kings",
+    "teamBabbr": "CSK",
+    "venue": "Guwahati",
+    "winner": ""
+  },
+  {
+    "id": 4,
+    "date": "2026-03-31 19:30",
+    "teamA": "Punjab Kings",
+    "teamAabbr": "PBKS",
+    "teamB": "Gujarat Titans",
+    "teamBabbr": "GT",
+    "venue": "New Chandigarh",
+    "winner": ""
+  },
+  {
+    "id": 5,
+    "date": "2026-04-01 19:30",
+    "teamA": "Lucknow Super Giants",
+    "teamAabbr": "LSG",
+    "teamB": "Delhi Capitals",
+    "teamBabbr": "DC",
+    "venue": "Lucknow",
+    "winner": ""
+  },
+  {
+    "id": 6,
+    "date": "2026-04-02 19:30",
+    "teamA": "Kolkata Knight Riders",
+    "teamAabbr": "KKR",
+    "teamB": "Sunrisers Hyderabad",
+    "teamBabbr": "SRH",
+    "venue": "Kolkata",
+    "winner": ""
+  },
+  {
+    "id": 7,
+    "date": "2026-04-03 19:30",
+    "teamA": "Chennai Super Kings",
+    "teamAabbr": "CSK",
+    "teamB": "Punjab Kings",
+    "teamBabbr": "PBKS",
+    "venue": "Chennai",
+    "winner": ""
+  },
+  {
+    "id": 8,
+    "date": "2026-04-04 15:30",
+    "teamA": "Delhi Capitals",
+    "teamAabbr": "DC",
+    "teamB": "Mumbai Indians",
+    "teamBabbr": "MI",
+    "venue": "Delhi",
+    "winner": ""
+  },
+  {
+    "id": 9,
+    "date": "2026-04-04 19:30",
+    "teamA": "Gujarat Titans",
+    "teamAabbr": "GT",
+    "teamB": "Rajasthan Royals",
+    "teamBabbr": "RR",
+    "venue": "Ahmedabad",
+    "winner": ""
+  },
+  {
+    "id": 10,
+    "date": "2026-04-05 15:30",
+    "teamA": "Sunrisers Hyderabad",
+    "teamAabbr": "SRH",
+    "teamB": "Lucknow Super Giants",
+    "teamBabbr": "LSG",
+    "venue": "Hyderabad",
+    "winner": ""
+  },
+  {
+    "id": 11,
+    "date": "2026-04-05 19:30",
+    "teamA": "Royal Challengers Bengaluru",
+    "teamAabbr": "RCB",
+    "teamB": "Chennai Super Kings",
+    "teamBabbr": "CSK",
+    "venue": "Bengaluru",
+    "winner": ""
+  },
+  {
+    "id": 12,
+    "date": "2026-04-06 19:30",
+    "teamA": "Kolkata Knight Riders",
+    "teamAabbr": "KKR",
+    "teamB": "Punjab Kings",
+    "teamBabbr": "PBKS",
+    "venue": "Kolkata",
+    "winner": ""
+  },
+  {
+    "id": 13,
+    "date": "2026-04-07 19:30",
+    "teamA": "Rajasthan Royals",
+    "teamAabbr": "RR",
+    "teamB": "Mumbai Indians",
+    "teamBabbr": "MI",
+    "venue": "Guwahati",
+    "winner": ""
+  },
+  {
+    "id": 14,
+    "date": "2026-04-08 19:30",
+    "teamA": "Delhi Capitals",
+    "teamAabbr": "DC",
+    "teamB": "Gujarat Titans",
+    "teamBabbr": "GT",
+    "venue": "Delhi",
+    "winner": ""
+  },
+  {
+    "id": 15,
+    "date": "2026-04-09 19:30",
+    "teamA": "Kolkata Knight Riders",
+    "teamAabbr": "KKR",
+    "teamB": "Lucknow Super Giants",
+    "teamBabbr": "LSG",
+    "venue": "Kolkata",
+    "winner": ""
+  },
+  {
+    "id": 16,
+    "date": "2026-04-10 19:30",
+    "teamA": "Rajasthan Royals",
+    "teamAabbr": "RR",
+    "teamB": "Royal Challengers Bengaluru",
+    "teamBabbr": "RCB",
+    "venue": "Guwahati",
+    "winner": ""
+  },
+  {
+    "id": 17,
+    "date": "2026-04-11 15:30",
+    "teamA": "Punjab Kings",
+    "teamAabbr": "PBKS",
+    "teamB": "Sunrisers Hyderabad",
+    "teamBabbr": "SRH",
+    "venue": "New Chandigarh",
+    "winner": ""
+  },
+  {
+    "id": 18,
+    "date": "2026-04-11 19:30",
+    "teamA": "Chennai Super Kings",
+    "teamAabbr": "CSK",
+    "teamB": "Delhi Capitals",
+    "teamBabbr": "DC",
+    "venue": "Chennai",
+    "winner": ""
+  },
+  {
+    "id": 19,
+    "date": "2026-04-12 15:30",
+    "teamA": "Lucknow Super Giants",
+    "teamAabbr": "LSG",
+    "teamB": "Gujarat Titans",
+    "teamBabbr": "GT",
+    "venue": "Lucknow",
+    "winner": ""
+  },
+  {
+    "id": 20,
+    "date": "2026-04-12 19:30",
+    "teamA": "Mumbai Indians",
+    "teamAabbr": "MI",
+    "teamB": "Royal Challengers Bengaluru",
+    "teamBabbr": "RCB",
+    "venue": "Mumbai",
+    "winner": ""
+  },
+  {
+    "id": 21,
+    "date": "2026-04-13 19:30",
+    "teamA": "Sunrisers Hyderabad",
+    "teamAabbr": "SRH",
+    "teamB": "Rajasthan Royals",
+    "teamBabbr": "RR",
+    "venue": "Hyderabad",
+    "winner": ""
+  },
+  {
+    "id": 22,
+    "date": "2026-04-14 19:30",
+    "teamA": "Chennai Super Kings",
+    "teamAabbr": "CSK",
+    "teamB": "Kolkata Knight Riders",
+    "teamBabbr": "KKR",
+    "venue": "Chennai",
+    "winner": ""
+  },
+  {
+    "id": 23,
+    "date": "2026-04-15 19:30",
+    "teamA": "Royal Challengers Bengaluru",
+    "teamAabbr": "RCB",
+    "teamB": "Lucknow Super Giants",
+    "teamBabbr": "LSG",
+    "venue": "Bengaluru",
+    "winner": ""
+  },
+  {
+    "id": 24,
+    "date": "2026-04-16 19:30",
+    "teamA": "Mumbai Indians",
+    "teamAabbr": "MI",
+    "teamB": "Punjab Kings",
+    "teamBabbr": "PBKS",
+    "venue": "Mumbai",
+    "winner": ""
+  },
+  {
+    "id": 25,
+    "date": "2026-04-17 19:30",
+    "teamA": "Gujarat Titans",
+    "teamAabbr": "GT",
+    "teamB": "Kolkata Knight Riders",
+    "teamBabbr": "KKR",
+    "venue": "Ahmedabad",
+    "winner": ""
+  },
+  {
+    "id": 26,
+    "date": "2026-04-18 15:30",
+    "teamA": "Royal Challengers Bengaluru",
+    "teamAabbr": "RCB",
+    "teamB": "Delhi Capitals",
+    "teamBabbr": "DC",
+    "venue": "Bengaluru",
+    "winner": ""
+  },
+  {
+    "id": 27,
+    "date": "2026-04-18 19:30",
+    "teamA": "Sunrisers Hyderabad",
+    "teamAabbr": "SRH",
+    "teamB": "Chennai Super Kings",
+    "teamBabbr": "CSK",
+    "venue": "Hyderabad",
+    "winner": ""
+  },
+  {
+    "id": 28,
+    "date": "2026-04-19 15:30",
+    "teamA": "Kolkata Knight Riders",
+    "teamAabbr": "KKR",
+    "teamB": "Rajasthan Royals",
+    "teamBabbr": "RR",
+    "venue": "Kolkata",
+    "winner": ""
+  },
+  {
+    "id": 29,
+    "date": "2026-04-19 19:30",
+    "teamA": "Punjab Kings",
+    "teamAabbr": "PBKS",
+    "teamB": "Lucknow Super Giants",
+    "teamBabbr": "LSG",
+    "venue": "New Chandigarh",
+    "winner": ""
+  },
+  {
+    "id": 30,
+    "date": "2026-04-20 19:30",
+    "teamA": "Gujarat Titans",
+    "teamAabbr": "GT",
+    "teamB": "Mumbai Indians",
+    "teamBabbr": "MI",
+    "venue": "Ahmedabad",
+    "winner": ""
+  },
+  {
+    "id": 31,
+    "date": "2026-04-21 19:30",
+    "teamA": "Sunrisers Hyderabad",
+    "teamAabbr": "SRH",
+    "teamB": "Delhi Capitals",
+    "teamBabbr": "DC",
+    "venue": "Hyderabad",
+    "winner": ""
+  },
+  {
+    "id": 32,
+    "date": "2026-04-22 19:30",
+    "teamA": "Lucknow Super Giants",
+    "teamAabbr": "LSG",
+    "teamB": "Rajasthan Royals",
+    "teamBabbr": "RR",
+    "venue": "Lucknow",
+    "winner": ""
+  },
+  {
+    "id": 33,
+    "date": "2026-04-23 19:30",
+    "teamA": "Mumbai Indians",
+    "teamAabbr": "MI",
+    "teamB": "Chennai Super Kings",
+    "teamBabbr": "CSK",
+    "venue": "Mumbai",
+    "winner": ""
+  },
+  {
+    "id": 34,
+    "date": "2026-04-24 19:30",
+    "teamA": "Royal Challengers Bengaluru",
+    "teamAabbr": "RCB",
+    "teamB": "Gujarat Titans",
+    "teamBabbr": "GT",
+    "venue": "Bengaluru",
+    "winner": ""
+  },
+  {
+    "id": 35,
+    "date": "2026-04-25 15:30",
+    "teamA": "Delhi Capitals",
+    "teamAabbr": "DC",
+    "teamB": "Punjab Kings",
+    "teamBabbr": "PBKS",
+    "venue": "Delhi",
+    "winner": ""
+  },
+  {
+    "id": 36,
+    "date": "2026-04-25 19:30",
+    "teamA": "Rajasthan Royals",
+    "teamAabbr": "RR",
+    "teamB": "Sunrisers Hyderabad",
+    "teamBabbr": "SRH",
+    "venue": "Jaipur",
+    "winner": ""
+  },
+  {
+    "id": 37,
+    "date": "2026-04-26 15:30",
+    "teamA": "Gujarat Titans",
+    "teamAabbr": "GT",
+    "teamB": "Chennai Super Kings",
+    "teamBabbr": "CSK",
+    "venue": "Ahmedabad",
+    "winner": ""
+  },
+  {
+    "id": 38,
+    "date": "2026-04-26 19:30",
+    "teamA": "Lucknow Super Giants",
+    "teamAabbr": "LSG",
+    "teamB": "Kolkata Knight Riders",
+    "teamBabbr": "KKR",
+    "venue": "Lucknow",
+    "winner": ""
+  },
+  {
+    "id": 39,
+    "date": "2026-04-27 19:30",
+    "teamA": "Delhi Capitals",
+    "teamAabbr": "DC",
+    "teamB": "Royal Challengers Bengaluru",
+    "teamBabbr": "RCB",
+    "venue": "Delhi",
+    "winner": ""
+  },
+  {
+    "id": 40,
+    "date": "2026-04-28 19:30",
+    "teamA": "Punjab Kings",
+    "teamAabbr": "PBKS",
+    "teamB": "Rajasthan Royals",
+    "teamBabbr": "RR",
+    "venue": "New Chandigarh",
+    "winner": ""
+  },
+  {
+    "id": 41,
+    "date": "2026-04-29 19:30",
+    "teamA": "Mumbai Indians",
+    "teamAabbr": "MI",
+    "teamB": "Sunrisers Hyderabad",
+    "teamBabbr": "SRH",
+    "venue": "Mumbai",
+    "winner": ""
+  },
+  {
+    "id": 42,
+    "date": "2026-04-30 19:30",
+    "teamA": "Gujarat Titans",
+    "teamAabbr": "GT",
+    "teamB": "Royal Challengers Bengaluru",
+    "teamBabbr": "RCB",
+    "venue": "Ahmedabad",
+    "winner": ""
+  },
+  {
+    "id": 43,
+    "date": "2026-05-01 19:30",
+    "teamA": "Rajasthan Royals",
+    "teamAabbr": "RR",
+    "teamB": "Delhi Capitals",
+    "teamBabbr": "DC",
+    "venue": "Jaipur",
+    "winner": ""
+  },
+  {
+    "id": 44,
+    "date": "2026-05-02 19:30",
+    "teamA": "Chennai Super Kings",
+    "teamAabbr": "CSK",
+    "teamB": "Mumbai Indians",
+    "teamBabbr": "MI",
+    "venue": "Chennai",
+    "winner": ""
+  },
+  {
+    "id": 45,
+    "date": "2026-05-03 15:30",
+    "teamA": "Sunrisers Hyderabad",
+    "teamAabbr": "SRH",
+    "teamB": "Kolkata Knight Riders",
+    "teamBabbr": "KKR",
+    "venue": "Hyderabad",
+    "winner": ""
+  },
+  {
+    "id": 46,
+    "date": "2026-05-03 19:30",
+    "teamA": "Gujarat Titans",
+    "teamAabbr": "GT",
+    "teamB": "Punjab Kings",
+    "teamBabbr": "PBKS",
+    "venue": "Ahmedabad",
+    "winner": ""
+  },
+  {
+    "id": 47,
+    "date": "2026-05-04 19:30",
+    "teamA": "Mumbai Indians",
+    "teamAabbr": "MI",
+    "teamB": "Lucknow Super Giants",
+    "teamBabbr": "LSG",
+    "venue": "Mumbai",
+    "winner": ""
+  },
+  {
+    "id": 48,
+    "date": "2026-05-05 19:30",
+    "teamA": "Delhi Capitals",
+    "teamAabbr": "DC",
+    "teamB": "Chennai Super Kings",
+    "teamBabbr": "CSK",
+    "venue": "Delhi",
+    "winner": ""
+  },
+  {
+    "id": 49,
+    "date": "2026-05-06 19:30",
+    "teamA": "Sunrisers Hyderabad",
+    "teamAabbr": "SRH",
+    "teamB": "Punjab Kings",
+    "teamBabbr": "PBKS",
+    "venue": "Hyderabad",
+    "winner": ""
+  },
+  {
+    "id": 50,
+    "date": "2026-05-07 19:30",
+    "teamA": "Lucknow Super Giants",
+    "teamAabbr": "LSG",
+    "teamB": "Royal Challengers Bengaluru",
+    "teamBabbr": "RCB",
+    "venue": "Lucknow",
+    "winner": ""
+  },
+  {
+    "id": 51,
+    "date": "2026-05-08 19:30",
+    "teamA": "Delhi Capitals",
+    "teamAabbr": "DC",
+    "teamB": "Kolkata Knight Riders",
+    "teamBabbr": "KKR",
+    "venue": "Delhi",
+    "winner": ""
+  },
+  {
+    "id": 52,
+    "date": "2026-05-09 19:30",
+    "teamA": "Rajasthan Royals",
+    "teamAabbr": "RR",
+    "teamB": "Gujarat Titans",
+    "teamBabbr": "GT",
+    "venue": "Jaipur",
+    "winner": ""
+  },
+  {
+    "id": 53,
+    "date": "2026-05-10 15:30",
+    "teamA": "Chennai Super Kings",
+    "teamAabbr": "CSK",
+    "teamB": "Lucknow Super Giants",
+    "teamBabbr": "LSG",
+    "venue": "Chennai",
+    "winner": ""
+  },
+  {
+    "id": 54,
+    "date": "2026-05-10 19:30",
+    "teamA": "Royal Challengers Bengaluru",
+    "teamAabbr": "RCB",
+    "teamB": "Mumbai Indians",
+    "teamBabbr": "MI",
+    "venue": "Raipur",
+    "winner": ""
+  },
+  {
+    "id": 55,
+    "date": "2026-05-11 19:30",
+    "teamA": "Punjab Kings",
+    "teamAabbr": "PBKS",
+    "teamB": "Delhi Capitals",
+    "teamBabbr": "DC",
+    "venue": "Dharamshala",
+    "winner": ""
+  },
+  {
+    "id": 56,
+    "date": "2026-05-12 19:30",
+    "teamA": "Gujarat Titans",
+    "teamAabbr": "GT",
+    "teamB": "Sunrisers Hyderabad",
+    "teamBabbr": "SRH",
+    "venue": "Ahmedabad",
+    "winner": ""
+  },
+  {
+    "id": 57,
+    "date": "2026-05-13 19:30",
+    "teamA": "Royal Challengers Bengaluru",
+    "teamAabbr": "RCB",
+    "teamB": "Kolkata Knight Riders",
+    "teamBabbr": "KKR",
+    "venue": "Raipur",
+    "winner": ""
+  },
+  {
+    "id": 58,
+    "date": "2026-05-14 19:30",
+    "teamA": "Punjab Kings",
+    "teamAabbr": "PBKS",
+    "teamB": "Mumbai Indians",
+    "teamBabbr": "MI",
+    "venue": "Dharamshala",
+    "winner": ""
+  },
+  {
+    "id": 59,
+    "date": "2026-05-15 19:30",
+    "teamA": "Lucknow Super Giants",
+    "teamAabbr": "LSG",
+    "teamB": "Chennai Super Kings",
+    "teamBabbr": "CSK",
+    "venue": "Lucknow",
+    "winner": ""
+  },
+  {
+    "id": 60,
+    "date": "2026-05-16 19:30",
+    "teamA": "Kolkata Knight Riders",
+    "teamAabbr": "KKR",
+    "teamB": "Gujarat Titans",
+    "teamBabbr": "GT",
+    "venue": "Kolkata",
+    "winner": ""
+  },
+  {
+    "id": 61,
+    "date": "2026-05-17 15:30",
+    "teamA": "Punjab Kings",
+    "teamAabbr": "PBKS",
+    "teamB": "Royal Challengers Bengaluru",
+    "teamBabbr": "RCB",
+    "venue": "Dharamshala",
+    "winner": ""
+  },
+  {
+    "id": 62,
+    "date": "2026-05-17 19:30",
+    "teamA": "Delhi Capitals",
+    "teamAabbr": "DC",
+    "teamB": "Rajasthan Royals",
+    "teamBabbr": "RR",
+    "venue": "Delhi",
+    "winner": ""
+  },
+  {
+    "id": 63,
+    "date": "2026-05-18 19:30",
+    "teamA": "Chennai Super Kings",
+    "teamAabbr": "CSK",
+    "teamB": "Sunrisers Hyderabad",
+    "teamBabbr": "SRH",
+    "venue": "Chennai",
+    "winner": ""
+  },
+  {
+    "id": 64,
+    "date": "2026-05-19 19:30",
+    "teamA": "Rajasthan Royals",
+    "teamAabbr": "RR",
+    "teamB": "Lucknow Super Giants",
+    "teamBabbr": "LSG",
+    "venue": "Jaipur",
+    "winner": ""
+  },
+  {
+    "id": 65,
+    "date": "2026-05-20 19:30",
+    "teamA": "Kolkata Knight Riders",
+    "teamAabbr": "KKR",
+    "teamB": "Mumbai Indians",
+    "teamBabbr": "MI",
+    "venue": "Kolkata",
+    "winner": ""
+  },
+  {
+    "id": 66,
+    "date": "2026-05-21 19:30",
+    "teamA": "Chennai Super Kings",
+    "teamAabbr": "CSK",
+    "teamB": "Gujarat Titans",
+    "teamBabbr": "GT",
+    "venue": "Chennai",
+    "winner": ""
+  },
+  {
+    "id": 67,
+    "date": "2026-05-22 19:30",
+    "teamA": "Sunrisers Hyderabad",
+    "teamAabbr": "SRH",
+    "teamB": "Royal Challengers Bengaluru",
+    "teamBabbr": "RCB",
+    "venue": "Hyderabad",
+    "winner": ""
+  },
+  {
+    "id": 68,
+    "date": "2026-05-23 19:30",
+    "teamA": "Lucknow Super Giants",
+    "teamAabbr": "LSG",
+    "teamB": "Punjab Kings",
+    "teamBabbr": "PBKS",
+    "venue": "Lucknow",
+    "winner": ""
+  },
+  {
+    "id": 69,
+    "date": "2026-05-24 15:30",
+    "teamA": "Mumbai Indians",
+    "teamAabbr": "MI",
+    "teamB": "Rajasthan Royals",
+    "teamBabbr": "RR",
+    "venue": "Mumbai",
+    "winner": ""
+  },
+  {
+    "id": 70,
+    "date": "2026-05-24 19:30",
+    "teamA": "Kolkata Knight Riders",
+    "teamAabbr": "KKR",
+    "teamB": "Delhi Capitals",
+    "teamBabbr": "DC",
+    "venue": "Kolkata",
+    "winner": ""
+  }
+]

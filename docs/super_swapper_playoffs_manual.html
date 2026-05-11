@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>IFL 2026 · Playoffs + Super Swapper Manual</title>
+    <style>
+      :root{
+        --bg:#070f1f;
+        --panel:#0f172a;
+        --panel-hi:#132038;
+        --text:#eaf2ff;
+        --muted:#94a3b8;
+        --acc:#e8a92e;
+        --acc2:#f6c75a;
+        --ok:#20c997;
+        --border:#22314e;
+      }
+      *{box-sizing:border-box;margin:0;padding:0}
+      body{
+        font-family:"Barlow Condensed","Segoe UI",sans-serif;
+        background:radial-gradient(900px 480px at 10% -10%,rgba(0,183,255,.12),transparent 60%),
+                   radial-gradient(900px 480px at 90% -10%,rgba(232,169,46,.14),transparent 60%),
+                   var(--bg);
+        color:var(--text);
+        padding:28px;
+      }
+      .wrap{
+        max-width:980px;
+        margin:0 auto;
+        background:rgba(10,18,32,.96);
+        border:1px solid rgba(255,255,255,.08);
+        border-radius:24px;
+        padding:26px;
+        box-shadow:0 24px 60px rgba(0,0,0,.35);
+      }
+      .k{
+        color:var(--acc2);
+        text-transform:uppercase;
+        letter-spacing:.2em;
+        font-size:12px;
+        font-weight:700;
+      }
+      h1{
+        margin:10px 0 6px;
+        font-size:36px;
+        font-family:"Teko","Bebas Neue","Arial Narrow",sans-serif;
+        letter-spacing:.04em;
+      }
+      .sub{
+        color:var(--muted);
+        margin-bottom:22px;
+      }
+      .section{
+        background:var(--panel);
+        border:1px solid var(--border);
+        border-radius:18px;
+        padding:18px;
+        margin-bottom:16px;
+      }
+      .title{
+        font-size:20px;
+        font-weight:800;
+        margin-bottom:8px;
+      }
+      ul{
+        margin-left:18px;
+        margin-bottom:12px;
+      }
+      li{margin-bottom:6px;color:#dbe5f5}
+      .note{
+        font-size:12px;
+        color:var(--muted);
+      }
+      .img{
+        margin-top:12px;
+        border:1px dashed rgba(255,255,255,.15);
+        border-radius:12px;
+        padding:10px;
+        color:var(--muted);
+        font-size:12px;
+        text-align:center;
+        background:rgba(255,255,255,.03);
+      }
+      .tag{
+        display:inline-block;
+        padding:4px 10px;
+        border-radius:999px;
+        font-size:12px;
+        font-weight:700;
+        margin-right:6px;
+        background:rgba(255,92,57,.15);
+        color:var(--acc);
+      }
+      @media (max-width:720px){
+        body{padding:16px}
+        h1{font-size:28px}
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="k">IFL 2026 User Manual</div>
+      <h1>Playoffs Prediction + Super Swapper</h1>
+      <div class="sub">Focused guide for the two newest features</div>
+
+      <div class="section">
+        <div class="title">1) Playoffs Prediction</div>
+        <div class="note">
+          <span class="tag">Step-by-step</span> Pick 4 teams before the window closes.
+        </div>
+        <ul>
+          <li>Go to the <b>Playoffs Prediction</b> tab.</li>
+          <li>Check the window status and time range at the top of the page.</li>
+          <li>Click four teams to select them (counter shows <b>4/4</b>).</li>
+          <li>If you need to change, use <b>Reset Picks</b>.</li>
+          <li>Click <b>Save Picks</b> to store your prediction.</li>
+        </ul>
+        <div class="note">Window is shown on the page (current: 2 Apr 2026 → 10 Apr 2026).</div>
+        <div class="img">
+          <div><b>Screenshot</b></div>
+          <img src="screenshots/09-playoffs-prediction.png" alt="Playoffs prediction screen" style="width:100%;border-radius:10px;margin-top:8px;display:block" />
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="title">2) Super Swapper</div>
+        <div class="note">
+          <span class="tag">Step-by-step</span> Swap 1 to 3 players during an open swap window.
+        </div>
+        <ul>
+          <li>Open <b>Super Swapper</b> and select an active <b>Swap Window</b>.</li>
+          <li>In <b>Swap Out</b>, click <b>1 to 3 players</b> from your <b>current team</b>. The Swap Out list also shows each player’s accumulated points.</li>
+        </ul>
+        <div class="img">
+          <div><b>Screenshot 10</b> · Swap Out from current team</div>
+          <img src="screenshots/10-swapout.png" alt="Swap out selection from current team" style="width:100%;border-radius:10px;margin-top:8px;display:block" />
+        </div>
+
+        <ul>
+          <li>Review the <b>Swap Pad</b> (before swap-in) to confirm selected swap-out players.</li>
+        </ul>
+        <div class="img">
+          <div><b>Screenshot 11</b> · Swap Pad before swap-in</div>
+          <img src="screenshots/11-swapbox.png" alt="Swap pad before swap-in" style="width:100%;border-radius:10px;margin-top:8px;display:block" />
+        </div>
+
+        <ul>
+          <li>In <b>Swap In</b>, click the <b>same number of players</b> from the pool.</li>
+          <li>The player pool can be sorted by accumulated points (highest → lowest or lowest → highest).</li>
+        </ul>
+        <div class="img">
+          <div><b>Screenshot 12</b> · Swap In from player pool</div>
+          <img src="screenshots/12-Swapin.png" alt="Swap in from player pool" style="width:100%;border-radius:10px;margin-top:8px;display:block" />
+        </div>
+
+        <ul>
+          <li>Review the <b>Swap Pad</b> after both selections and check the <b>Validation Summary</b> (total players, bowlers, international).</li>
+          <li>Click <b>Submit Swaps</b> to save.</li>
+          <li>Click <b>Freeze Swaps</b> to lock the swap for the window.</li>
+          <li>Use <b>Reset Saved Swaps</b> only if you need to discard the current submission.</li>
+        </ul>
+        <div class="note">Frozen swaps cannot be changed unless reset.</div>
+        <div class="img">
+          <div><b>Screenshot 13</b> · Final swap pad + validation summary</div>
+          <img src="screenshots/13-Updated-swapbox-validation-summary.png" alt="Final swap pad with validation summary" style="width:100%;border-radius:10px;margin-top:8px;display:block" />
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="title">3) Related User Experience Updates</div>
+        <ul>
+          <li><b>Guest Demo</b> lets visitors explore a simulated user journey without joining the league.</li>
+          <li><b>My Team</b> cards now show player archetype avatars such as Run Machine, Wicket Hunter, Chaos Pick, Clutch Finisher, and Dark Horse.</li>
+          <li>On mobile, player cards flip on tap and auto-flip back after 3 seconds.</li>
+          <li>The logged-in Home screen highlights the current leader using a rotating horizontal disc and the leader’s team logo.</li>
+          <li>The Home leaderboard preview auto-scrolls when enough ranks are available.</li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,161 @@
+{
+  "version": 1,
+  "description": "Sample scoring import payloads for all 12 matches. Use one match block at a time in Admin -> Scoring -> Manual Import.",
+  "matchImports": {
+    "1": {
+      "winner": "CSK",
+      "motm": "MS Dhoni",
+      "players": [
+        { "name": "MS Dhoni", "runs": 62, "catches": 1, "runouts": 0, "wickets": 0 },
+        { "name": "Suresh Raina", "runs": 37, "catches": 0, "runouts": 0, "wickets": 0 },
+        { "name": "R Jadeja", "runs": 22, "catches": 1, "runouts": 0, "wickets": 2 },
+        { "name": "Imran Tahir", "runs": 0, "catches": 0, "runouts": 0, "wickets": 3 },
+        { "name": "Virat Kohli", "runs": 55, "catches": 0, "runouts": 0, "wickets": 0 },
+        { "name": "AB de Villiers", "runs": 33, "catches": 1, "runouts": 0, "wickets": 0 },
+        { "name": "Yuzvendra Chahal", "runs": 0, "catches": 0, "runouts": 0, "wickets": 2 }
+      ]
+    },
+    "2": {
+      "winner": "KKR",
+      "motm": "Andre Russell",
+      "players": [
+        { "name": "Andre Russell", "runs": 48, "catches": 1, "runouts": 0, "wickets": 2 },
+        { "name": "Sunil Narine", "runs": 27, "catches": 0, "runouts": 0, "wickets": 3 },
+        { "name": "Shubman Gill", "runs": 44, "catches": 0, "runouts": 0, "wickets": 0 },
+        { "name": "Kuldeep Yadav", "runs": 0, "catches": 1, "runouts": 0, "wickets": 2 },
+        { "name": "David Warner", "runs": 51, "catches": 0, "runouts": 0, "wickets": 0 },
+        { "name": "Jonny Bairstow", "runs": 29, "catches": 1, "runouts": 0, "wickets": 0 },
+        { "name": "Rashid Khan", "runs": 12, "catches": 0, "runouts": 0, "wickets": 2 }
+      ]
+    },
+    "3": {
+      "winner": "MI",
+      "motm": "Jasprit Bumrah",
+      "players": [
+        { "name": "Rohit Sharma", "runs": 67, "catches": 0, "runouts": 0, "wickets": 0 },
+        { "name": "Suryakumar Yadav", "runs": 41, "catches": 1, "runouts": 0, "wickets": 0 },
+        { "name": "Hardik Pandya", "runs": 24, "catches": 1, "runouts": 0, "wickets": 1 },
+        { "name": "Jasprit Bumrah", "runs": 0, "catches": 0, "runouts": 0, "wickets": 4 },
+        { "name": "Rishabh Pant", "runs": 38, "catches": 0, "runouts": 0, "wickets": 0 },
+        { "name": "Shikhar Dhawan", "runs": 46, "catches": 0, "runouts": 0, "wickets": 0 },
+        { "name": "Kagiso Rabada", "runs": 0, "catches": 0, "runouts": 0, "wickets": 2 }
+      ]
+    },
+    "4": {
+      "winner": "KXIP",
+      "motm": "Lokesh Rahul",
+      "players": [
+        { "name": "Sanju Samson", "runs": 52, "catches": 0, "runouts": 0, "wickets": 0 },
+        { "name": "Jos Buttler", "runs": 26, "catches": 1, "runouts": 0, "wickets": 0 },
+        { "name": "Ben Stokes", "runs": 31, "catches": 0, "runouts": 0, "wickets": 1 },
+        { "name": "Jofra Archer", "runs": 8, "catches": 1, "runouts": 0, "wickets": 2 },
+        { "name": "Lokesh Rahul", "runs": 75, "catches": 0, "runouts": 0, "wickets": 0 },
+        { "name": "Mayank Agarwal", "runs": 43, "catches": 0, "runouts": 0, "wickets": 0 },
+        { "name": "Mohammed Shami", "runs": 0, "catches": 0, "runouts": 0, "wickets": 3 }
+      ]
+    },
+    "5": {
+      "winner": "RCB",
+      "motm": "Virat Kohli",
+      "players": [
+        { "name": "Virat Kohli", "runs": 83, "catches": 0, "runouts": 0, "wickets": 0 },
+        { "name": "AB de Villiers", "runs": 36, "catches": 1, "runouts": 0, "wickets": 0 },
+        { "name": "Marcus Stoinis", "runs": 19, "catches": 0, "runouts": 0, "wickets": 1 },
+        { "name": "Yuzvendra Chahal", "runs": 0, "catches": 0, "runouts": 0, "wickets": 3 },
+        { "name": "Rohit Sharma", "runs": 44, "catches": 0, "runouts": 0, "wickets": 0 },
+        { "name": "Quinton de Kock", "runs": 31, "catches": 1, "runouts": 0, "wickets": 0 },
+        { "name": "Jasprit Bumrah", "runs": 0, "catches": 0, "runouts": 0, "wickets": 2 }
+      ]
+    },
+    "6": {
+      "winner": "DC",
+      "motm": "Shreyas Iyer",
+      "players": [
+        { "name": "Shreyas Iyer", "runs": 72, "catches": 0, "runouts": 0, "wickets": 0 },
+        { "name": "Rishabh Pant", "runs": 39, "catches": 1, "runouts": 0, "wickets": 0 },
+        { "name": "Axar Patel", "runs": 17, "catches": 1, "runouts": 0, "wickets": 2 },
+        { "name": "Kagiso Rabada", "runs": 0, "catches": 0, "runouts": 0, "wickets": 3 },
+        { "name": "MS Dhoni", "runs": 30, "catches": 0, "runouts": 0, "wickets": 0 },
+        { "name": "Suresh Raina", "runs": 24, "catches": 1, "runouts": 0, "wickets": 0 },
+        { "name": "Deepak Chahar", "runs": 0, "catches": 0, "runouts": 0, "wickets": 2 }
+      ]
+    },
+    "7": {
+      "winner": "SRH",
+      "motm": "David Warner",
+      "players": [
+        { "name": "David Warner", "runs": 79, "catches": 0, "runouts": 0, "wickets": 0 },
+        { "name": "Jonny Bairstow", "runs": 34, "catches": 1, "runouts": 0, "wickets": 0 },
+        { "name": "Rashid Khan", "runs": 10, "catches": 1, "runouts": 0, "wickets": 3 },
+        { "name": "Bhuvneshwar Kumar", "runs": 0, "catches": 0, "runouts": 0, "wickets": 2 },
+        { "name": "Sanju Samson", "runs": 49, "catches": 0, "runouts": 0, "wickets": 0 },
+        { "name": "Ben Stokes", "runs": 28, "catches": 0, "runouts": 0, "wickets": 1 },
+        { "name": "Jofra Archer", "runs": 6, "catches": 1, "runouts": 0, "wickets": 2 }
+      ]
+    },
+    "8": {
+      "winner": "KKR",
+      "motm": "Sunil Narine",
+      "players": [
+        { "name": "Lokesh Rahul", "runs": 47, "catches": 0, "runouts": 0, "wickets": 0 },
+        { "name": "Chris Gayle", "runs": 35, "catches": 1, "runouts": 0, "wickets": 0 },
+        { "name": "R Ashwin", "runs": 9, "catches": 0, "runouts": 0, "wickets": 1 },
+        { "name": "Mohammed Shami", "runs": 0, "catches": 0, "runouts": 0, "wickets": 2 },
+        { "name": "Sunil Narine", "runs": 54, "catches": 0, "runouts": 0, "wickets": 2 },
+        { "name": "Andre Russell", "runs": 33, "catches": 1, "runouts": 0, "wickets": 1 },
+        { "name": "Dinesh Karthik", "runs": 18, "catches": 1, "runouts": 0, "wickets": 0 }
+      ]
+    },
+    "9": {
+      "winner": "CSK",
+      "motm": "R Jadeja",
+      "players": [
+        { "name": "MS Dhoni", "runs": 28, "catches": 1, "runouts": 0, "wickets": 0 },
+        { "name": "Faf du Plessis", "runs": 61, "catches": 0, "runouts": 0, "wickets": 0 },
+        { "name": "R Jadeja", "runs": 35, "catches": 1, "runouts": 0, "wickets": 3 },
+        { "name": "Imran Tahir", "runs": 0, "catches": 0, "runouts": 0, "wickets": 2 },
+        { "name": "Rohit Sharma", "runs": 32, "catches": 0, "runouts": 0, "wickets": 0 },
+        { "name": "Hardik Pandya", "runs": 27, "catches": 1, "runouts": 0, "wickets": 1 },
+        { "name": "Lasith Malinga", "runs": 0, "catches": 0, "runouts": 0, "wickets": 2 }
+      ]
+    },
+    "10": {
+      "winner": "DC",
+      "motm": "Kagiso Rabada",
+      "players": [
+        { "name": "Rishabh Pant", "runs": 57, "catches": 1, "runouts": 0, "wickets": 0 },
+        { "name": "Shikhar Dhawan", "runs": 40, "catches": 0, "runouts": 0, "wickets": 0 },
+        { "name": "Kagiso Rabada", "runs": 0, "catches": 0, "runouts": 0, "wickets": 4 },
+        { "name": "Axar Patel", "runs": 18, "catches": 1, "runouts": 0, "wickets": 1 },
+        { "name": "David Warner", "runs": 42, "catches": 0, "runouts": 0, "wickets": 0 },
+        { "name": "Kane Williamson", "runs": 25, "catches": 0, "runouts": 0, "wickets": 0 },
+        { "name": "Rashid Khan", "runs": 9, "catches": 1, "runouts": 0, "wickets": 2 }
+      ]
+    },
+    "11": {
+      "winner": "RCB",
+      "motm": "AB de Villiers",
+      "players": [
+        { "name": "Virat Kohli", "runs": 58, "catches": 0, "runouts": 0, "wickets": 0 },
+        { "name": "AB de Villiers", "runs": 76, "catches": 1, "runouts": 0, "wickets": 0 },
+        { "name": "Yuzvendra Chahal", "runs": 0, "catches": 0, "runouts": 0, "wickets": 2 },
+        { "name": "Dinesh Karthik", "runs": 34, "catches": 1, "runouts": 0, "wickets": 0 },
+        { "name": "Andre Russell", "runs": 21, "catches": 0, "runouts": 0, "wickets": 1 },
+        { "name": "Sunil Narine", "runs": 19, "catches": 1, "runouts": 0, "wickets": 2 }
+      ]
+    },
+    "12": {
+      "winner": "MI",
+      "motm": "Suryakumar Yadav",
+      "players": [
+        { "name": "Sanju Samson", "runs": 39, "catches": 0, "runouts": 0, "wickets": 0 },
+        { "name": "Jos Buttler", "runs": 45, "catches": 1, "runouts": 0, "wickets": 0 },
+        { "name": "Jofra Archer", "runs": 7, "catches": 1, "runouts": 0, "wickets": 2 },
+        { "name": "Rohit Sharma", "runs": 52, "catches": 0, "runouts": 0, "wickets": 0 },
+        { "name": "Suryakumar Yadav", "runs": 81, "catches": 1, "runouts": 0, "wickets": 0 },
+        { "name": "Hardik Pandya", "runs": 23, "catches": 0, "runouts": 0, "wickets": 1 },
+        { "name": "Jasprit Bumrah", "runs": 0, "catches": 0, "runouts": 0, "wickets": 3 }
+      ]
+    }
+  }
+}

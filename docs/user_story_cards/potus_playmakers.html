@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>POTUS Playmakers User Story Card</title>
+  <style>
+    :root{
+      --bg:#07111f;
+      --panel:#0d1b31;
+      --panel-2:#122642;
+      --line:rgba(255,255,255,.12);
+      --text:#eef5ff;
+      --muted:#9fb4d3;
+      --gold:#ffbe0b;
+      --accent:#0f3d7a;
+      --sky:#00b4d8;
+      --ok:#20c997;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      min-height:100vh;
+      display:grid;
+      place-items:center;
+      padding:24px;
+      background:
+        radial-gradient(700px 340px at 20% 10%, color-mix(in srgb, var(--accent) 22%, transparent), transparent 60%),
+        radial-gradient(700px 340px at 80% 0%, rgba(0,180,216,.16), transparent 60%),
+        linear-gradient(160deg,#06101d 0%, #091427 50%, #050b16 100%);
+      color:var(--text);
+      font-family:Inter, system-ui, sans-serif;
+    }
+    .frame{
+      width:min(1080px,100%);
+      display:grid;
+      grid-template-columns:380px 1fr;
+      gap:24px;
+      padding:24px;
+      border-radius:30px;
+      background:linear-gradient(160deg,rgba(17,30,54,.96),rgba(8,16,30,.98));
+      border:1px solid var(--line);
+      box-shadow:0 28px 60px rgba(0,0,0,.38);
+      overflow:hidden;
+      position:relative;
+    }
+    .frame::before{
+      content:"";
+      position:absolute;
+      inset:-20% auto auto -10%;
+      width:320px;
+      height:320px;
+      background:radial-gradient(circle,color-mix(in srgb, var(--accent) 28%, transparent),transparent 65%);
+      pointer-events:none;
+    }
+    .left{display:flex;flex-direction:column;gap:16px}
+    .team-pill{display:inline-flex;align-items:center;gap:10px;align-self:flex-start;padding:8px 14px;border-radius:999px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.04);font-size:12px;text-transform:uppercase;letter-spacing:.18em;color:var(--muted)}
+    .team-dot{width:10px;height:10px;border-radius:50%;background:var(--accent);box-shadow:0 0 14px color-mix(in srgb, var(--accent) 68%, transparent)}
+    .photo-card{position:relative;min-height:540px;border-radius:26px;overflow:hidden;background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.01)),linear-gradient(160deg,#12315c,#0c1d36);border:1px solid rgba(255,255,255,.1);box-shadow:inset 0 1px 0 rgba(255,255,255,.08),0 20px 38px rgba(0,0,0,.26)}
+    .photo-card img{width:100%;height:100%;object-fit:cover;display:block}
+    .photo-fallback{position:absolute;inset:0;display:grid;place-items:center;font-size:96px;font-weight:900;letter-spacing:.04em;color:rgba(255,255,255,.92);background:radial-gradient(circle at 50% 22%, rgba(255,190,11,.28), transparent 30%),linear-gradient(180deg, rgba(255,255,255,.08), transparent 40%),linear-gradient(160deg,#17437c,#0b1f39)}
+    .photo-badge{position:absolute;left:18px;bottom:18px;padding:10px 14px;border-radius:16px;background:rgba(6,13,25,.72);border:1px solid rgba(255,255,255,.12);backdrop-filter:blur(8px);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold)}
+    .right{display:flex;flex-direction:column;gap:18px;min-width:0;position:relative;z-index:1}
+    .eyebrow{font-size:12px;text-transform:uppercase;letter-spacing:.22em;color:var(--gold)}
+    .title{font-size:clamp(36px,5vw,58px);line-height:.92;font-weight:900;margin:0;max-width:10ch}
+    .subtitle{color:var(--muted);font-size:16px;line-height:1.6;max-width:64ch;margin:0}
+    .hero-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+    .stat{padding:16px 18px;border-radius:20px;background:linear-gradient(160deg,var(--panel-2),rgba(10,20,36,.95));border:1px solid var(--line)}
+    .stat .v{font-size:26px;font-weight:900;line-height:1.05;color:var(--text)}
+    .stat .l{margin-top:6px;font-size:11px;text-transform:uppercase;letter-spacing:.16em;color:var(--muted)}
+    .insights{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+    .insight{padding:18px;border-radius:22px;border:1px solid var(--line);background:linear-gradient(160deg,rgba(15,29,52,.94),rgba(8,16,30,.96));box-shadow:inset 0 1px 0 rgba(255,255,255,.06)}
+    .insight h3{margin:0 0 10px;font-size:15px;letter-spacing:.04em;color:var(--text)}
+    .insight p{margin:0;color:var(--muted);line-height:1.6;font-size:14px}
+    .insight.orange{border-color:rgba(255,92,57,.28); background:linear-gradient(160deg,rgba(48,25,18,.7),rgba(14,17,28,.95))}
+    .insight.blue{border-color:rgba(0,180,216,.24); background:linear-gradient(160deg,rgba(13,37,52,.85),rgba(10,18,30,.96))}
+    .insight.gold{border-color:rgba(255,190,11,.22); background:linear-gradient(160deg,rgba(56,42,16,.62),rgba(12,17,27,.96))}
+    .insight.green{border-color:rgba(32,201,151,.24); background:linear-gradient(160deg,rgba(12,42,33,.68),rgba(9,18,29,.96))}
+    .footer{margin-top:auto;display:flex;align-items:center;justify-content:space-between;gap:12px;padding-top:6px;color:var(--muted);font-size:13px;flex-wrap:wrap}
+    .chip{padding:8px 12px;border-radius:999px;background:rgba(255,255,255,.05);border:1px solid var(--line);white-space:nowrap}
+    @media (max-width: 860px){.frame{grid-template-columns:1fr}.photo-card{min-height:360px}.hero-stats,.insights{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <section class="frame">
+    <div class="left">
+      <div class="team-pill"><span class="team-dot"></span> IFL 2026 User Spotlight</div>
+      <div class="photo-card">
+        <img src="data:image/webp;base64,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" alt="POTUS Playmakers logo" />
+        <div class="photo-badge">Frozen Squad Story</div>
+      </div>
+    </div>
+    <div class="right">
+      <div class="eyebrow">Sample User Story Card</div>
+      <h1 class="title">POTUS Playmakers</h1>
+      <p class="subtitle">
+        A grounded user insight card built from the current stored squad. This version blends real roster shape,
+        ownership behavior, and one league personality note into a single visual story.
+      </p>
+      <div class="hero-stats">
+        <div class="stat"><div class="v">242</div><div class="l">Total Points</div></div>
+        <div class="stat"><div class="v">15</div><div class="l">Domestic Picks</div></div>
+        <div class="stat"><div class="v">GT</div><div class="l">Top Team Stack</div></div>
+      </div>
+      <div class="insights">
+        <article class="insight orange"><h3>Domestic Identity</h3><p>This team mixes domestic and overseas picks rather than leaning into one side completely.</p></article>
+        <article class="insight blue"><h3>Squad Shape</h3><p>The squad is spread across 10 IPL teams, but the strongest concentration sits with GT (3 picks). Role-wise it stays batting-heavy with 7 batters, 6 bowlers, 5 wicketkeepers, and 2 all-rounders.</p></article>
+        <article class="insight gold"><h3>Differential Reputation</h3><p>This is not a template squad. Finn Allen is backed by only 4 of 20 teams; Prasidh Krishna is backed by only 5 of 20 teams; Nicholas Pooran is backed by only 6 of 20 teams, which gives the team a reputation for backing unusual names before the rest of the pool follows.</p></article>
+        <article class="insight green"><h3>Personal Note</h3><p>Otherwise known as Andu, Anu, Bobb, and BumKesh, he is the twer-king teammate and live wire of the group. His personality sits in that impossible zone where, much like Rakhi Sawant, you may love him or hate him, but you definitely cannot ignore him.</p></article>
+      </div>
+      <div class="footer">
+        <div class="chip">Squad preview: Noor Ahmad, Sanju Samson, KL Rahul, Kuldeep Yadav, Prasidh Krishna, Rashid Khan</div>
+        <div class="chip">Phone: 7045694241</div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

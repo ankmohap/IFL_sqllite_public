@@ -1,0 +1,13 @@
+.git
+.gitignore
+node_modules
+client/node_modules
+client/dist
+server/data/*.sqlite3
+server/data/*.db
+server/data/*.sqlite
+.DS_Store
+npm-debug.log*
+*.log
+.vscode
+.idea

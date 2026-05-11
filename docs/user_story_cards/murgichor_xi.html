@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Murgichor XI User Story Card</title>
+  <style>
+    :root{
+      --bg:#07111f;
+      --panel:#0d1b31;
+      --panel-2:#122642;
+      --line:rgba(255,255,255,.12);
+      --text:#eef5ff;
+      --muted:#9fb4d3;
+      --gold:#ffbe0b;
+      --accent:#0f3d7a;
+      --sky:#00b4d8;
+      --ok:#20c997;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      min-height:100vh;
+      display:grid;
+      place-items:center;
+      padding:24px;
+      background:
+        radial-gradient(700px 340px at 20% 10%, color-mix(in srgb, var(--accent) 22%, transparent), transparent 60%),
+        radial-gradient(700px 340px at 80% 0%, rgba(0,180,216,.16), transparent 60%),
+        linear-gradient(160deg,#06101d 0%, #091427 50%, #050b16 100%);
+      color:var(--text);
+      font-family:Inter, system-ui, sans-serif;
+    }
+    .frame{
+      width:min(1080px,100%);
+      display:grid;
+      grid-template-columns:380px 1fr;
+      gap:24px;
+      padding:24px;
+      border-radius:30px;
+      background:linear-gradient(160deg,rgba(17,30,54,.96),rgba(8,16,30,.98));
+      border:1px solid var(--line);
+      box-shadow:0 28px 60px rgba(0,0,0,.38);
+      overflow:hidden;
+      position:relative;
+    }
+    .frame::before{
+      content:"";
+      position:absolute;
+      inset:-20% auto auto -10%;
+      width:320px;
+      height:320px;
+      background:radial-gradient(circle,color-mix(in srgb, var(--accent) 28%, transparent),transparent 65%);
+      pointer-events:none;
+    }
+    .left{display:flex;flex-direction:column;gap:16px}
+    .team-pill{display:inline-flex;align-items:center;gap:10px;align-self:flex-start;padding:8px 14px;border-radius:999px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.04);font-size:12px;text-transform:uppercase;letter-spacing:.18em;color:var(--muted)}
+    .team-dot{width:10px;height:10px;border-radius:50%;background:var(--accent);box-shadow:0 0 14px color-mix(in srgb, var(--accent) 68%, transparent)}
+    .photo-card{position:relative;min-height:540px;border-radius:26px;overflow:hidden;background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.01)),linear-gradient(160deg,#12315c,#0c1d36);border:1px solid rgba(255,255,255,.1);box-shadow:inset 0 1px 0 rgba(255,255,255,.08),0 20px 38px rgba(0,0,0,.26)}
+    .photo-card img{width:100%;height:100%;object-fit:cover;display:block}
+    .photo-fallback{position:absolute;inset:0;display:grid;place-items:center;font-size:96px;font-weight:900;letter-spacing:.04em;color:rgba(255,255,255,.92);background:radial-gradient(circle at 50% 22%, rgba(255,190,11,.28), transparent 30%),linear-gradient(180deg, rgba(255,255,255,.08), transparent 40%),linear-gradient(160deg,#17437c,#0b1f39)}
+    .photo-badge{position:absolute;left:18px;bottom:18px;padding:10px 14px;border-radius:16px;background:rgba(6,13,25,.72);border:1px solid rgba(255,255,255,.12);backdrop-filter:blur(8px);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold)}
+    .right{display:flex;flex-direction:column;gap:18px;min-width:0;position:relative;z-index:1}
+    .eyebrow{font-size:12px;text-transform:uppercase;letter-spacing:.22em;color:var(--gold)}
+    .title{font-size:clamp(36px,5vw,58px);line-height:.92;font-weight:900;margin:0;max-width:10ch}
+    .subtitle{color:var(--muted);font-size:16px;line-height:1.6;max-width:64ch;margin:0}
+    .hero-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+    .stat{padding:16px 18px;border-radius:20px;background:linear-gradient(160deg,var(--panel-2),rgba(10,20,36,.95));border:1px solid var(--line)}
+    .stat .v{font-size:26px;font-weight:900;line-height:1.05;color:var(--text)}
+    .stat .l{margin-top:6px;font-size:11px;text-transform:uppercase;letter-spacing:.16em;color:var(--muted)}
+    .insights{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+    .insight{padding:18px;border-radius:22px;border:1px solid var(--line);background:linear-gradient(160deg,rgba(15,29,52,.94),rgba(8,16,30,.96));box-shadow:inset 0 1px 0 rgba(255,255,255,.06)}
+    .insight h3{margin:0 0 10px;font-size:15px;letter-spacing:.04em;color:var(--text)}
+    .insight p{margin:0;color:var(--muted);line-height:1.6;font-size:14px}
+    .insight.orange{border-color:rgba(255,92,57,.28); background:linear-gradient(160deg,rgba(48,25,18,.7),rgba(14,17,28,.95))}
+    .insight.blue{border-color:rgba(0,180,216,.24); background:linear-gradient(160deg,rgba(13,37,52,.85),rgba(10,18,30,.96))}
+    .insight.gold{border-color:rgba(255,190,11,.22); background:linear-gradient(160deg,rgba(56,42,16,.62),rgba(12,17,27,.96))}
+    .insight.green{border-color:rgba(32,201,151,.24); background:linear-gradient(160deg,rgba(12,42,33,.68),rgba(9,18,29,.96))}
+    .footer{margin-top:auto;display:flex;align-items:center;justify-content:space-between;gap:12px;padding-top:6px;color:var(--muted);font-size:13px;flex-wrap:wrap}
+    .chip{padding:8px 12px;border-radius:999px;background:rgba(255,255,255,.05);border:1px solid var(--line);white-space:nowrap}
+    @media (max-width: 860px){.frame{grid-template-columns:1fr}.photo-card{min-height:360px}.hero-stats,.insights{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <section class="frame">
+    <div class="left">
+      <div class="team-pill"><span class="team-dot"></span> IFL 2026 User Spotlight</div>
+      <div class="photo-card">
+        <img src="data:image/webp;base64,UklGRioXAABXRUJQVlA4WAoAAAAgAAAA/wAA/wAASUNDUMgBAAAAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADZWUDggPBUAAJB+AJ0BKgABAAE+SSCMRCKiIRdanLAoBISztxiYHkfm5zmju1QNcfBfQ6Onah9v5MXEzqSbcZGt9w+pzy67S7dY1wJI/rOrIMyTnvBcQXDl68PbiX4ZTQX1mrKGaTfwqtNpmyU0ZdfyTdySgiWgD+c4HL/9f3xqYbzLrtGyN/lNm9NKUl6Cl2o+Y8LEhhlO6O9fbHL8UQDqWVaIMwM3KUFnvfkFkv0Asnev56wbnD4ZHTwuJehp9UMuHtbvzZK0ZX5eU2EXoGaEtv2Cd0wA4RvQuol6dSKSubU8aUSSylLVr1mv/UpDUw/QsWa0fos8QrsQn1UPFfMuRIkFC+5pqBYIKzqjHI6VgPDqKhRnTWHxoFuaVt57tR4yRmGe72Afd+mJ7YvlMvQ46oUvUF1Xe0VRClVuX1ojJtWvvIAE5CtVfmbO6Yl+wWYsDqti+Yhq6hiQYZq1nKb2fBSuiYapHuZUGmscCFpow8d856KlEk4ICih/Yu62ut1lmdLRjuaMPNGQ5wTQ3tXTlouhIERD9zBx2rcK/Nm9RtncQzivV8Ai/sDdhxBhePeUOSQwMkFo2WmkeryT5tV7tawdPglVYyasIVXgDtFOMYi1ylPZNae6//zuBARiExqJRc7eij7x5D9YIhsU+BzKMRWKbW6qgJf0yEm9HaHn3iJdY0GIQRy9fnq7UGtPVvyc6J1YaAOjVooR1QcOIcsJ14PNJtvSaLbz3Z+Rqf5DU3h7HTFEJnjkElwELsvdTnqqgPYXdZeHwkdDDYu4J7NCB3+AiTS3AwCvUv3wIirS9gr0k/6Sd4IcQLYwCCuej8qrIJz85+Acfv1T47YE7K7mA0XaWo4KAje+g9jkpx8JU7BKSGK/SZLwkLMEts+yuYY/GMMZteBmcmdAwh9/r/TDKVY/HfLBMr0BCzrt3MQ+rGVxvm1zT255LOEezIM6uG25DbWfJ/DRo+2JCMw/X18vrd4xqku4lDSd2IKoopQfyizZn60xIhV1ypcbXHOedgr8MJuOZIm9rtQ6PrTTEsJNq4vncRsP7ol9J5gn1hFyqEniSH1d4ugBqU9UOXS4RRN3PhZ/JI4XVJTt8H4kxpXcL3BDjVGU/xgbQCBqMSKpv1SI+IW3rs392CJDDxSk2HVm63s6mE15wJwtCU8Y1WYYKE/JWP/lde4wNmjI+IQq4ioKl1GacnQyntB9+K+MlW5ncIqws0PMfuzo2WYgLjA4F3+Ch7kMVwTfz62nl3qSUcwWVTpdctiEIra8C9dsvOxPGwVNG+1VkGHHfeApMuewhh/c/xjr0RUfojNweoNFfc6OSvv3Br1BsG4lo7Yoi0T99MHf8eeJULW2UfUDEK7C/nxy8gAA/vyEfbLh//ggvnX+IKSS/nR5KSg3wYgjhGVoFBgAld4tSY3H+YmZCLIRMLtw+u4NB8NjkYWcC8QbMI0WhqDqxedUgwmXTbi+9O0RLeOdSjSc2arsw8QcyygCjv+O94IuyeCpuIsJ244p4CxZ04SfO9hwoVVpHOMGczKK9tGjqE5IMVE3HZFE2AH4meFqNJsThPMJcDRca6RyymDtVXSkekDmk3CF+HfQy2FlIOugVBhTufPXGucOAKMwdHtToQbf2YxyQCPsfLz+oO0Aj1ccABgQWrvEP0VQH9GwHo6f6TwzPrLA2n7NIztWpcrh5h6EmPzp75qn4fF2GSggYJn48+8RpODp/V9SdekUWDo7KNQhtfOhww75EqXNHGkB1MJZNM2btlQiuSEvThIka5ApDEt6QoSAmJARfdCaSKDiijv1wY9iNEzSDWopgGuTyX1FZcytCTv3maL6ZvMRYiAOUVNW32sosa0zTd28bqgnZ2sj2H62UhglqtmgEQa3eV1tDGMGJfbtAy38Oyl5h/Atu+3rBq1ri0vhGQTM2LyYsa7H1HnvI3kJkRNF7DYRqvRh8e9R+qeqlicjP2DqPKggOUcJ70JqfXD2x7VDVRB8K9V6ebom5ZwhVoRNgsriTsBkII7G9Si2vxmA0n6m/Y7jLFLazp7mbE8mmarE1ZuLEUwJHidwtX6PKhbNuqD9WIjR1dkhPs3FYogcridxXexOHi+UBu87Hj9KtikBxiRmOMNTP6eY+vONiU0ZDIQwx2xLIalhswaj2n6yr6pit1Nat8L9e+4WWhGo9guiVAZ0BEDWJSEY33kZg6M3e3/nFbKwFXxh1lThP7PZw40Ws0C06CJBZYnuaSGmFDcBNNjL9/dvm4eSVJmvOqjQbZxcNpnO8lgdA/X18qn6+wlZXR+eCXZAGu1aNyBzlVKbtUnlHjEOHtDasSDRzLZQPOcKHFv1qB6Vi4uHZn3h9yl7eQf1NJewDP1tJLQ4rxv0vO1aqz9swus/+5TqN4BvZa6rZIuFSnuL7WnQroYDiyawTgAlCSYpe94cDj6TqwUVYGaEDeTIgHuH3rlmABf+7a2WraNWT3akVtUzWcNZNK/AAgEkVLo3Dpt5XbVnGKooayElEu+/rnAzHw6Ca2Cep8z9J2pSTZMbm2JSnOAIY1ZaNh7epezguqJOcEyI7vG0XzXz/W7EYe0/16RmWkp/obXLMPkKj48qVyOW9hWbc893wObxCgFZs+hiDm8MrAZ8IKTCmw5k3+0OqXRhJd4XsjR0iwIGPwgDEg8Aoq0n75ocZTMEwTt9t/rfp0SS5mjgsBQqfc3AInA2uN/LnQi93sVHxxCbKH86TCgGYdMro7Gcfp7k3hfsmRl/a3P8QoFf9tUwi8zvtepHocfuUCl5Ta4gjr9RdkOAQKiC/ShcyB2Ip4/RdC2fo0nR2rk9jo2RQAg7bMz34s332NBqv4PRKm52EH7MBFq/6vfVwBx8Lx5Y9uuAJlh4kk6nIURT5Zjztc08s8gIp9lkWvIyf1qtt1ajtJhYRKCpYyWXfm4rGulOi01yTYpOWvCLGuqiwcwHz4iMyGJOfCNiKtXAgXi+wNQ/DmV+9A6i7nySgWL974P/4jV8Ec6tGvCXVFKoNHhDNppHOw4/nR4Z6LV0qTXVv2rl/yHZ2Cf4rJ6zqHC5oSWRG7jpfohDtI9fR54Qbf8OdhGfiyHO31Xi6Is2eer5I80rU804tiPjGehrw8fVhgXNHUZBFMHNfVADfCF7j8OQSRElbkZ4VHcW1usMSRN3SmWrYfTjX0Q5Fs8uP4EVIhKr/NavXGYFu9EfuFo+HtlDPx7E/WIJYOIoRaouTlU8Bt7zUDHH15Uh1lbXTeehYjJHG7h96gPZc1W5sFMeVYzrJXL14mJkSasBu1K/Ov6Q7IGCa67dQsQ9fzmBxiLvc8YpY23HEtJuATVaC9EO0zdHMOQHZXQEITA3yWrUBDuz49PIC0hByjLWPdtXndnVtVwV/M7IoOjtsL3gwL8scI5kTqbsoVe3lw9IWK/T++70GJuGg+/QB/mfmMwhgmf8TOEeH9WeBj0V33CbQpNbTvB/+WmpCOYPf6msgbMBtYB6Sd0gx/B7n4B9QihSnxvRJzSw2bQHdAo3e7D4ivOQ7rb8oUvFgrUXPNZKDg+0tCKijtclK70vIKZAahARA1ck+veOIfycZ4S4wv2rMi1Ks0LEsp520L8zM3tL3f26sNDUaw0Wa5nDd1n1XRe7jn/Qto1Wcj1t1l4/IYFUElRo64/gjIMBWmC2HXeVQi3/O8oD2x3qVhsT1hdXltalq1WV6fIKfxWQGMaNstL73gFi736lIl31t7xV5xLO7Pigck5pTtelbzbpANqVFi5xXB2s1t3ZLqphzk6YnxtRWDn7KAR8RrzbnTov7aqBb4PYnMb3L/Z919jakgr1vRihzmCobP+BKa9iwgrNNAhnK8OPSV5q7r1LRdGonqoXpZD5Q7SipvUv+zT9x3AoImQtwP/CrhTW0eVn8PGmbmumyjTErZa3iQVN8ivcGeWxhhkpnRqczny5lx58sNlvTwYaSJNaVVb+tKAnrlkM/mbfKHDyxDQOmLftl6jJ0Nd0NsRaemDvD2xONBojpRyO3+sflWzkLdta2PrjV8NKfjnt0+VgARRoyJwML2VWsOiSfYJhRp9i59GeoOHKBsxVoXWnvVz/vBcod26fqisLYArbqBYzPjTesS+vULAeyJ+JmUf3WZyfhSu+oBTRYPsLSDcub2C7o4n6kidBGIQHuK4NcDp4E7QL1d22KZmZq8JJGoquVVh58lxLck3Np161Dt4YkPDT2I6NHURGFIww3ty25nS3ZjCh1O97YrkBMhnpGT8QigK4r7bu44Yp0kjhT2/q2W/a12ap42cg9zEkYqDqYzpXBiNx7JYp6bo7jXgcRFzqQjvWN/H259Yp2u6HLdduUS5X0FVFELOen9hLqGzHx7fa7SdPZdSD/RQdjBKlOMzb9O96S41MZiKnIDIkluW3vws/yFDddNLF2GW0M6F8LQrJZA++V8rOt9ZyQ0p7CRQotIfrNwUicT5MTI9LqmGAuRdyBR1JioJ4kn1fVVb7lfOZ7YR3qQTRFmMsabX1BIo2QG6yesbTX4QIHDMnjxhIWa6WrfTXWnxYFTvyCPHD44ZR7whfRmEmPnY6extFDMq29m/m3bYnsh3YgPF5S1b9igjCp7+mWLWLzLBB4qLsLzOIHBawxQSWHUFN5UFsxc5piOmXVvoSm8f/89494HbR40f49lm8hbu3XnHgjgp9qaIQPospj7/aSOym8IiL7muawip6ktnyO2+XA6V+s3xwUrpu0sTN8XIzFxGkLFbyGCXJMT+aLHY2bxUWwHuZ/NQHd5ryPFERvcYmrKRTpsnodiGzj0+FfJ/9aaSnyj+oZF8XfmY1XdudGL3Hr0O3AsqieoKrOQ0mkd4Np6YJFMxBkOTtt9CVK/qqVuIhRIYOZ2qjTtSHYCc0xBZH81/IXy6hvPPhf8ZmDQ8FYYGYC0k1qiVJTeX22bgpZl9GTZnr2J28/62vwLt/IXFKxKrTARo8jq86hhqroR8gc7kUUGNPwS8GMDeW3MdRGNJlgLa2MhcYOTMix3iO4uFqynWD5dXsBBIIWZyQdmLv2unVZI/pEujTrnqPW35ctT4/sM6gwt+SqJXYA2ko1IPCgkkxRs7KnCyJyzv4E5iG/k/9zacwPLq4OPMUPj96++rds84s4RBdmgcYGEomDaUBCr89BVLri8z/m2seh1AR0x/lyyTJgxx26jYA547UVkmosNtRnLGo7h52OhNVAw6hW/qmdSEfuC51AziXT1NAiI7kvRfXP4ANP5Za/LkCQmzFezeavw8V3bqZMLuPrqeA9pV3lvBz5TztncVC0mHop9wFCiC8V18dqG8wl9Dz5DUXJ2N/JKp5yfu8Z/IIPHhazySExbTbOKZXmYVhHjYJg2W+UqVm0oHMUoHY/fW2gxOVTcipNTMQzAFc8zjsY/OFWdlDPrmn2K1rY1xNBeBcs1siS4IF+INe/6Ow4dOlwTXU1jocN6qCE1Siow+fjFHmFgwudcYs10KDqJUcQmkZGRLH7dFIAVCXHzeiTRUPrjglgdCQSjOy1L7U8x4M3moOLG7346/1L1XAHX5Ns4OmhhwywAwAz2BmpQcF8lxJ99ohaLIGBN4fMaACeCec3fiB0hUCiSsY7tubSvHMEhA1nsWY7++t8+BV4EBAr0NptUCjLjpsjyVbIfxv0oh+wIjgwXEG2ytVCo4EMp9kgOyAXaoT+se6SJ1GZ7H3CN+Rv65ME6I787LaZEusWYQO0+0NpsaAbRIgOdvPfW7SGXr7QMxHx8cGojyLgQDtzXgHDuq1U50KOZyBCeoZZlXw6RKypCFMB/Rss9ZQd9RqNZTspqnlnAFjx3ymcBESQhdDY8c3TCcKf04G/CjqKj3etEsOm8pSKbhbW9xPu9XBUV7uEJH2c1sFiXV6Llda2K2iMAL8YEJ9TfeeIIpvRvJWZ+H/oJjB/c9j7ds87pczlKkVdTNutENhC9TIqwElxfEbNEGs1QD9AfIChfggsBh9T4WAGy1rIeriRWE+tnW33ZtXGiJ/xqBM2ZV68HzzFaOqnlD0K3DTg3kEp53AJ3f3QGPz6KLIzUR5JdMwnqfYHkLkZZMRQVYbDAqKEYuKXYO3PS/lVy4FFQvokOYdyp833bbAQ8LjEfQFrqa9/2eYRrkAI2+Crajs+z1CvZHXlENGDK/DI92/wS1jjoPd0CF96nVurciVLjZADrbTk/1PD57pkhKtNVPxqmmf9TB5UCFc4B46j6BjkQtwFa7HViK8Qn/XYhwsitqjh+3ab9OQqnlOvv+Lu8HiZQrGFg/8jjJunBaz5+ck5MVH1WoXMB7aw9w6iEuNushJtaFAevPq1fyZKh6+wLaQmuKCw/Pn6OujrUDFoJvGERDzftqO2zXj0Px97S9HYumoNnpdlZxvOD/TshuYrhllJf7ML4OFO8aEsSmOVtFe5OoYVr076xhbfIi51eVxaC5428OI+jBBPZX6512ryRnyanEMGuE9lNIFN35G14S29Yz789OpcqGweQm7jhGPRtvBy2efz3BwumP42m3HLXevFf8DoTSUS6E0/wRPnI9YLw5zQs/wxWSGmEIJZkEugggNqv+5/wHaHc/6/sIp57N33JUQ4cWV4F9iZZC9++Y1xGFov39Hdar1WgA1B+x1NxRgWsKXJXE6wsYiQOk+Tf8DOjSyDHsxgBvBTmtXd/uQC9GdR3LZNMuIuERYXQdIhYqSeLFkbV4GMaKT9dycu1G9uwKA95K3lOniXa6gad5jWespWnfdjw2jlfBnmg7n+p5YSqtx7jlGFuL1GiCrgNdFfQSD4xUeGn58FrRvkrl6SPQiaAHYi+7ecu3bNiVuv/adq1vHKg4q2/AvwUcKJ7ucI5v1SjguXZlYrEoMrkRQ7h0cwZ5AzKihW6MhsoliPHCmOs2+nHku0Sh1nE0KKAGGargItZ/J5sqMXUQ0GsAMt8sqomcUn0zXDmqly6he4t1T1LI97Wxw27aDhV+36camJskPkSabOBQYmVcd0nujSvonqI+sslMl6c0lzVdkMzLH72Qq+PIKHYrq4FbxNeTspnwp9xp47ZWbZJ7rk6OJ19a9hBhy03hfTkc++WGp11/3kDrQefFtwlqzWy7TtGCeBZFGFG2XPhbdEHXGBS4JYh+AQfwQW1BgCrItudnoAWnDD8CahsH75R8P1DZ+eF8jb764tNw0lx9sa1NVdXU8CygB+erHSbVHYTb+xyivY3qOnSRbb35Qcujr3QnscW6OsBYwdTMNK8rKP0Y1hNlP2EpBGFkjHCL3b2U3G7FJbsPLpJlDSQAAAA==" alt="Murgichor XI logo" />
+        <div class="photo-badge">Frozen Squad Story</div>
+      </div>
+    </div>
+    <div class="right">
+      <div class="eyebrow">Sample User Story Card</div>
+      <h1 class="title">Murgichor XI</h1>
+      <p class="subtitle">
+        A grounded user insight card built from the current stored squad. This version blends real roster shape,
+        ownership behavior, and one league personality note into a single visual story.
+      </p>
+      <div class="hero-stats">
+        <div class="stat"><div class="v">0</div><div class="l">Total Points</div></div>
+        <div class="stat"><div class="v">20</div><div class="l">Domestic Picks</div></div>
+        <div class="stat"><div class="v">GT</div><div class="l">Top Team Stack</div></div>
+      </div>
+      <div class="insights">
+        <article class="insight orange"><h3>Domestic Identity</h3><p>All 20 selections are domestic. Murgichor XI has gone fully local with zero overseas names in the active squad.</p></article>
+        <article class="insight blue"><h3>Squad Shape</h3><p>The squad is spread across 8 IPL teams, but the strongest concentration sits with GT (4 picks). Role-wise it stays batting-heavy with 9 batters, 6 bowlers, 3 wicketkeepers, and 2 all-rounders.</p></article>
+        <article class="insight gold"><h3>Differential Reputation</h3><p>This is not a template squad. Riyan Parag is a solo hold for this squad; Rajat Patidar is backed by only 2 of 20 teams; Tilak Varma is backed by only 3 of 20 teams, which gives the team a reputation for backing unusual names before the rest of the pool follows.</p></article>
+        <article class="insight green"><h3>Personal Note</h3><p>Otherwise known as Bengal Bewdas and earlier seen in the league as Pandas Puchuks, this team has been a proud organizer helping carry the legacy of IFL for CVD2.</p></article>
+      </div>
+      <div class="footer">
+        <div class="chip">Squad preview: Ruturaj Gaikwad, Sanju Samson, KL Rahul, Kuldeep Yadav, Mohammed Siraj, Prasidh Krishna</div>
+        <div class="chip">Phone: 9004228034</div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

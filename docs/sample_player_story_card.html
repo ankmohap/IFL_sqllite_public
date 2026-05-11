@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sample User Insight Story Card</title>
+  <style>
+    :root{
+      --bg:#07111f;
+      --panel:#0d1b31;
+      --panel-2:#122642;
+      --line:rgba(255,255,255,.12);
+      --text:#eef5ff;
+      --muted:#9fb4d3;
+      --gold:#ffbe0b;
+      --accent:#ff5c39;
+      --sky:#00b4d8;
+      --ok:#20c997;
+      --violet:#8b5cf6;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      min-height:100vh;
+      display:grid;
+      place-items:center;
+      padding:24px;
+      background:
+        radial-gradient(700px 340px at 20% 10%, rgba(255,92,57,.18), transparent 60%),
+        radial-gradient(700px 340px at 80% 0%, rgba(0,180,216,.16), transparent 60%),
+        linear-gradient(160deg,#06101d 0%, #091427 50%, #050b16 100%);
+      color:var(--text);
+      font-family:Inter, system-ui, sans-serif;
+    }
+    .frame{
+      width:min(1080px,100%);
+      display:grid;
+      grid-template-columns:380px 1fr;
+      gap:24px;
+      padding:24px;
+      border-radius:30px;
+      background:linear-gradient(160deg,rgba(17,30,54,.96),rgba(8,16,30,.98));
+      border:1px solid var(--line);
+      box-shadow:0 28px 60px rgba(0,0,0,.38);
+      overflow:hidden;
+      position:relative;
+    }
+    .frame::before{
+      content:"";
+      position:absolute;
+      inset:-20% auto auto -10%;
+      width:320px;
+      height:320px;
+      background:radial-gradient(circle,rgba(255,190,11,.18),transparent 65%);
+      pointer-events:none;
+    }
+    .frame::after{
+      content:"";
+      position:absolute;
+      inset:auto -8% -18% auto;
+      width:340px;
+      height:340px;
+      background:radial-gradient(circle,rgba(139,92,246,.18),transparent 68%);
+      pointer-events:none;
+    }
+    .left{
+      display:flex;
+      flex-direction:column;
+      gap:16px;
+    }
+    .team-pill{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      align-self:flex-start;
+      padding:8px 14px;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,.12);
+      background:rgba(255,255,255,.04);
+      font-size:12px;
+      text-transform:uppercase;
+      letter-spacing:.18em;
+      color:var(--muted);
+    }
+    .team-dot{
+      width:10px;
+      height:10px;
+      border-radius:50%;
+      background:var(--accent);
+      box-shadow:0 0 14px rgba(255,92,57,.6);
+    }
+    .photo-card{
+      position:relative;
+      min-height:540px;
+      border-radius:26px;
+      overflow:hidden;
+      background:
+        linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.01)),
+        linear-gradient(160deg,#12315c,#0c1d36);
+      border:1px solid rgba(255,255,255,.1);
+      box-shadow:inset 0 1px 0 rgba(255,255,255,.08), 0 20px 38px rgba(0,0,0,.26);
+    }
+    .photo-card img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+    .photo-fallback{
+      position:absolute;
+      inset:0;
+      display:grid;
+      place-items:center;
+      font-size:96px;
+      font-weight:900;
+      letter-spacing:.04em;
+      color:rgba(255,255,255,.92);
+      background:
+        radial-gradient(circle at 50% 22%, rgba(255,190,11,.28), transparent 30%),
+        linear-gradient(180deg, rgba(255,255,255,.08), transparent 40%),
+        linear-gradient(160deg,#17437c,#0b1f39);
+    }
+    .photo-badge{
+      position:absolute;
+      left:18px;
+      bottom:18px;
+      padding:10px 14px;
+      border-radius:16px;
+      background:rgba(6,13,25,.72);
+      border:1px solid rgba(255,255,255,.12);
+      backdrop-filter:blur(8px);
+      font-size:12px;
+      letter-spacing:.16em;
+      text-transform:uppercase;
+      color:var(--gold);
+    }
+    .right{
+      display:flex;
+      flex-direction:column;
+      gap:18px;
+      min-width:0;
+      position:relative;
+      z-index:1;
+    }
+    .eyebrow{
+      font-size:12px;
+      text-transform:uppercase;
+      letter-spacing:.22em;
+      color:var(--gold);
+    }
+    .title{
+      font-size:clamp(36px,5vw,58px);
+      line-height:.92;
+      font-weight:900;
+      margin:0;
+      max-width:10ch;
+    }
+    .subtitle{
+      color:var(--muted);
+      font-size:16px;
+      line-height:1.6;
+      max-width:64ch;
+      margin:0;
+    }
+    .hero-stats{
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:14px;
+    }
+    .stat{
+      padding:16px 18px;
+      border-radius:20px;
+      background:linear-gradient(160deg,var(--panel-2),rgba(10,20,36,.95));
+      border:1px solid var(--line);
+    }
+    .stat .v{
+      font-size:26px;
+      font-weight:900;
+      line-height:1.05;
+      color:var(--text);
+    }
+    .stat .l{
+      margin-top:6px;
+      font-size:11px;
+      text-transform:uppercase;
+      letter-spacing:.16em;
+      color:var(--muted);
+    }
+    .insights{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:14px;
+    }
+    .insight{
+      padding:18px;
+      border-radius:22px;
+      border:1px solid var(--line);
+      background:linear-gradient(160deg,rgba(15,29,52,.94),rgba(8,16,30,.96));
+      box-shadow:inset 0 1px 0 rgba(255,255,255,.06);
+    }
+    .insight h3{
+      margin:0 0 10px;
+      font-size:15px;
+      letter-spacing:.04em;
+      color:var(--text);
+    }
+    .insight p{
+      margin:0;
+      color:var(--muted);
+      line-height:1.6;
+      font-size:14px;
+    }
+    .insight.orange{border-color:rgba(255,92,57,.28); background:linear-gradient(160deg,rgba(48,25,18,.7),rgba(14,17,28,.95))}
+    .insight.blue{border-color:rgba(0,180,216,.24); background:linear-gradient(160deg,rgba(13,37,52,.85),rgba(10,18,30,.96))}
+    .insight.gold{border-color:rgba(255,190,11,.22); background:linear-gradient(160deg,rgba(56,42,16,.62),rgba(12,17,27,.96))}
+    .insight.green{border-color:rgba(32,201,151,.24); background:linear-gradient(160deg,rgba(12,42,33,.68),rgba(9,18,29,.96))}
+    .footer{
+      margin-top:auto;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      padding-top:6px;
+      color:var(--muted);
+      font-size:13px;
+      flex-wrap:wrap;
+    }
+    .chip{
+      padding:8px 12px;
+      border-radius:999px;
+      background:rgba(255,255,255,.05);
+      border:1px solid var(--line);
+      white-space:nowrap;
+    }
+    @media (max-width: 860px){
+      .frame{grid-template-columns:1fr}
+      .photo-card{min-height:360px}
+      .hero-stats,.insights{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <section class="frame">
+    <div class="left">
+      <div class="team-pill"><span class="team-dot"></span> IFL 2026 User Spotlight</div>
+      <div class="photo-card">
+        <!-- Replace this fallback with an <img src="user-photo.jpg" alt="Murgichor XI" /> if you want a real profile photo -->
+        <div class="photo-fallback">MXI</div>
+        <div class="photo-badge">Profile Snapshot</div>
+      </div>
+    </div>
+    <div class="right">
+      <div class="eyebrow">Sample User Story Card</div>
+      <h1 class="title">Murgichor XI</h1>
+      <p class="subtitle">
+        A sample user insight card designed for activity-feed storytelling, spotlight reels, or PDF exports.
+        The focus here is the user as a fantasy manager: squad personality, team bias, ownership style,
+        and the kind of picks that define how they play the IFL 2026 season.
+      </p>
+
+      <div class="hero-stats">
+        <div class="stat">
+          <div class="v">0</div>
+          <div class="l">International Picks</div>
+        </div>
+        <div class="stat">
+          <div class="v">7</div>
+          <div class="l">RCB Core Players</div>
+        </div>
+        <div class="stat">
+          <div class="v">High</div>
+          <div class="l">Differential Appetite</div>
+        </div>
+      </div>
+
+      <div class="insights">
+        <article class="insight orange">
+          <h3>Domestic-Only Identity</h3>
+          <p>Has taken all domestic players and no international ones, making this one of the boldest local-core builds in the league.</p>
+        </article>
+        <article class="insight blue">
+          <h3>RCB Concentration</h3>
+          <p>Player concentration is strongly tilted toward RCB, which means this squad can spike hard on the right Bengaluru-heavy matchdays.</p>
+        </article>
+        <article class="insight gold">
+          <h3>Unusual Picks Reputation</h3>
+          <p>Known for backing unusual players before the rest of the field catches on. This user tends to trade safety for breakout upside.</p>
+        </article>
+        <article class="insight green">
+          <h3>What Makes This Team Different</h3>
+          <p>The squad profile suggests conviction-based selection rather than template building, which makes Murgichor XI one of the more distinctive teams in the pool.</p>
+        </article>
+      </div>
+
+      <div class="footer">
+        <div class="chip">Use this layout for user story highlights, manual reports, or activity-feed cards</div>
+        <div class="chip">Sample Only</div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

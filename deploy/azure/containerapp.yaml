@@ -1,0 +1,41 @@
+location: eastus
+name: ifl-fantasy-app
+properties:
+  managedEnvironmentId: /subscriptions/<SUBSCRIPTION_ID>/resourceGroups/<RG_NAME>/providers/Microsoft.App/managedEnvironments/<ENV_NAME>
+  configuration:
+    ingress:
+      external: true
+      targetPort: 4000
+      transport: auto
+    registries:
+      - server: <ACR_NAME>.azurecr.io
+        username: <ACR_USERNAME>
+        passwordSecretRef: acr-password
+    secrets:
+      - name: acr-password
+        value: <ACR_PASSWORD>
+      - name: admin-password
+        value: <ADMIN_PASSWORD>
+      - name: admin-token-secret
+        value: <ADMIN_TOKEN_SECRET>
+  template:
+    containers:
+      - image: <ACR_NAME>.azurecr.io/ifl-fullstack:latest
+        name: ifl-app
+        env:
+          - name: PORT
+            value: "4000"
+          - name: DATABASE_URL
+            value: postgresql://<user>:<password>@<host>:5432/<db>?sslmode=require
+          - name: ADMIN_USERNAME
+            value: admin
+          - name: ADMIN_PASSWORD
+            secretRef: admin-password
+          - name: ADMIN_TOKEN_SECRET
+            secretRef: admin-token-secret
+        resources:
+          cpu: 0.5
+          memory: 1Gi
+    scale:
+      minReplicas: 1
+      maxReplicas: 1

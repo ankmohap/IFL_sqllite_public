@@ -26,16 +26,23 @@ properties:
           - name: PORT
             value: "4000"
           - name: DATABASE_URL
-            value: sqlite:////app/server/data/ifl.sqlite3
+            value: sqlite:////app/data/ifl.sqlite3
           - name: ADMIN_USERNAME
             value: admin
           - name: ADMIN_PASSWORD
             secretRef: admin-password
           - name: ADMIN_TOKEN_SECRET
             secretRef: admin-token-secret
+        volumeMounts:
+          - volumeName: sqlite-data
+            mountPath: /app/data
         resources:
           cpu: 0.5
           memory: 1Gi
+    volumes:
+      - name: sqlite-data
+        storageType: AzureFile
+        storageName: <environment-storage-name>
     scale:
       minReplicas: 1
       maxReplicas: 1

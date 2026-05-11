@@ -83,10 +83,10 @@ POINT_RULES = {
     "MAN_OF_MATCH": 50,
     "MATCH_WINNER_PICK": 50,
 }
-AZURE_OPENAI_ENDPOINT = (os.getenv("AZURE_OPENAI_ENDPOINT", "https://iflopenai.openai.azure.com/").strip() or "https://iflopenai.openai.azure.com/").rstrip("/")
-AZURE_OPENAI_API_KEY = os.getenv("AZURE_OPENAI_API_KEY", "").strip()
-AZURE_OPENAI_DEPLOYMENT = os.getenv("AZURE_OPENAI_DEPLOYMENT", "gpt-4.1-mini").strip() or "gpt-4.1-mini"
-AZURE_OPENAI_API_VERSION = os.getenv("AZURE_OPENAI_API_VERSION", "2024-10-21").strip() or "2024-10-21"
+AZURE_OPENAI_ENDPOINT = ""
+AZURE_OPENAI_API_KEY = ""
+AZURE_OPENAI_DEPLOYMENT = ""
+AZURE_OPENAI_API_VERSION = ""
 TRUSTED_CRICKET_DOMAINS = (
     "sports.ndtv.com",
     "iplt20.com",
@@ -96,9 +96,9 @@ TRUSTED_CRICKET_DOMAINS = (
     "espncricinfo.com",
     "www.espncricinfo.com",
 )
-SEARCH_USER_AGENT = "Mozilla/5.0 (compatible; IFLGuru/1.0; +https://ifl.local)"
-CRICBUZZ_RAPIDAPI_KEY = os.getenv("CRICBUZZ_RAPIDAPI_KEY", "").strip()
-CRICBUZZ_RAPIDAPI_HOST = os.getenv("CRICBUZZ_RAPIDAPI_HOST", "cricbuzz-cricket.p.rapidapi.com").strip() or "cricbuzz-cricket.p.rapidapi.com"
+SEARCH_USER_AGENT = "Mozilla/5.0 (compatible; IFLApp/1.0; +https://ifl.local)"
+CRICBUZZ_RAPIDAPI_KEY = ""
+CRICBUZZ_RAPIDAPI_HOST = ""
 CRICBUZZ_MATCH_MAP_PATH = ROOT_DIR / "server" / "data" / "cricbuzz_match_ids_2026.json"
 
 _ADMIN_LOGIN_ATTEMPTS: dict[str, list[int]] = {}
@@ -3276,39 +3276,14 @@ def api_user_prediction(payload: dict[str, Any], authorization: str | None = Hea
 
 @app.post("/api/user/ifl-guru")
 def api_user_ifl_guru(payload: dict[str, Any], authorization: str | None = Header(default=None)):
-    username = _require_user(authorization)
-    question = str(payload.get("question") or "").strip()
-    if not question:
-        raise HTTPException(status_code=400, detail="question is required")
-    if len(question) > 1200:
-        raise HTTPException(status_code=400, detail="question is too long")
-
-    context = _build_ifl_guru_context(username)
-    answer = _azure_openai_hybrid_answer(question, context, actor_username=username)
-    return {"ok": True, "context": {"teamName": context.get("teamName"), "rank": context.get("rank")}, **answer}
+    _require_user(authorization)
+    raise HTTPException(status_code=410, detail="IFL GURU is not available in the SQLite non-AI edition.")
 
 
 @app.post("/api/admin/scoring/draft-json")
 def api_admin_scoring_draft_json(payload: dict[str, Any], authorization: str | None = Header(default=None)):
-    admin_username = _require_admin(authorization)
-    match_id = _to_non_negative_int(payload.get("match_id"), 0)
-    if match_id <= 0:
-        raise HTTPException(status_code=400, detail="match_id is required")
-
-    with SessionLocal() as db:
-        match = db.get(Match, match_id)
-        if match is None:
-            raise HTTPException(status_code=404, detail="match not found")
-        players = db.scalars(
-            select(Player)
-            .where(Player.team.in_([str(match.team_a_abbr or ""), str(match.team_b_abbr or "")]))
-            .order_by(Player.team, Player.name)
-        ).all()
-        if not players:
-            raise HTTPException(status_code=400, detail="No fixture players found for selected match")
-
-    draft = _generate_admin_scoring_draft(match, players, actor_username=admin_username)
-    return {"ok": True, "match_id": match_id, **draft}
+    _require_admin(authorization)
+    raise HTTPException(status_code=410, detail="AI scoring draft is not available in the SQLite non-AI edition. Use manual import or manual scoring entry.")
 
 
 @app.post("/api/user/login-audit")

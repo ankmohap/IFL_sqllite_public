@@ -1,6 +1,7 @@
 WEBSITES_PORT=4000
+WEBSITES_ENABLE_APP_SERVICE_STORAGE=true
 PORT=4000
-DATABASE_URL=sqlite:////home/site/wwwroot/server/data/ifl.sqlite3
+DATABASE_URL=sqlite:////home/data/ifl.sqlite3
 ADMIN_USERNAME=admin
 ADMIN_PASSWORD=<strong-admin-password>
 ADMIN_TOKEN_SECRET=<long-random-secret>

@@ -1307,6 +1307,7 @@ function getMaxRankGapInsight(users = {}) {
 }
 
 function IflGuru({ user, username, userToken, lang = "en" }) {
+  return null;
   const [open, setOpen] = useState(false);
   const [question, setQuestion] = useState("");
   const [isMobileChat, setIsMobileChat] = useState(() => (typeof window !== "undefined" ? window.innerWidth <= 640 : false));
@@ -1548,6 +1549,7 @@ function IflGuru({ user, username, userToken, lang = "en" }) {
 }
 
 function GuestIflGuru() {
+  return null;
   const [open, setOpen] = useState(false);
   const [busy, setBusy] = useState(false);
   const [selected, setSelected] = useState("");
@@ -4391,38 +4393,12 @@ function AdminScoring({ showToast, onRecalculate, adminToken }) {
     setImportPreview(null);
   };
 
-  const initiateAiDraft = async () => {
-    if (!match) return;
-    setDraftBusy(true);
-    setImportOpen(true);
-    setImportPreview(null);
-    setDraftMeta(null);
-    try {
-      const data = await generateAdminScoringDraft(adminToken, match.id);
-      const nextText = String(data?.draftText || "").trim();
-      setImportText(nextText);
-      setDraftMeta({
-        model: data?.model || "",
-        searchMode: data?.searchMode || "",
-        sources: Array.isArray(data?.sources) ? data.sources : [],
-        resolvedMatchId: Number(data?.resolvedMatchId || 0),
-      });
-      setImportPreview(buildImportPreview(nextText));
-      showToast("AI scoring draft generated", "success");
-    } catch (e) {
-      showToast(e?.message || "Failed to generate AI scoring draft", "error");
-    } finally {
-      setDraftBusy(false);
-    }
-  };
-
   return (
     <div className="page">
       <div className="sh">
         <div><div className="pt">Points Scoring</div><div className="ps">Update match-wise player stats and recalculate all points</div></div>
         <div style={{ display: "flex", gap: 8 }}>
           <button className="btn btn-secondary btn-sm" onClick={() => { setImportOpen(true); setImportPreview(null); setDraftMeta(null); }} disabled={!match}>Manual Import</button>
-          <button className="btn btn-secondary btn-sm" onClick={initiateAiDraft} disabled={!match || draftBusy}>{draftBusy ? "Generating AI Draft..." : "Initiate AI Scoring"}</button>
           <button className="btn btn-secondary btn-sm" onClick={clearScoring} disabled={!match}>Clear Match</button>
           <button className="btn btn-adm btn-sm" onClick={saveScoring}>Save & Recalculate</button>
         </div>
@@ -4436,7 +4412,7 @@ function AdminScoring({ showToast, onRecalculate, adminToken }) {
           </select>
         </div>
         <div style={{ fontSize: 13, color: "var(--muted)", marginTop: 2 }}>
-          AI draft resolves the selected fixture against the static Cricbuzz 2026 match-id map, fetches the RapidAPI scorecard JSON, and generates an import-ready draft automatically.
+          Use manual JSON or CSV import, or enter player stats directly in the scoring grid below.
         </div>
         <div style={{ fontSize: 13, color: "var(--muted)", marginTop: 8 }}>
           Runs: 1 each · Catch: 5 · Runout/Stumping: 10 · Wicket: 20 · 3W bonus: +25 · 5W bonus: +50 · 50/75/100 run bonus: +25/+50/+100 · MoM: +50 · Winner pick: +50
@@ -4485,7 +4461,6 @@ function AdminScoring({ showToast, onRecalculate, adminToken }) {
           footer={
             <>
               <button className="btn btn-secondary btn-sm" onClick={() => { setImportOpen(false); setDraftMeta(null); }}>Cancel</button>
-              <button className="btn btn-secondary btn-sm" onClick={initiateAiDraft} disabled={draftBusy || !match}>{draftBusy ? "Generating..." : "Initiate AI Draft"}</button>
               <button className="btn btn-secondary btn-sm" onClick={() => onImportPreview()}>Preview</button>
               <button className="btn btn-adm btn-sm" onClick={applyManualImport} disabled={!importPreview}>Apply Import</button>
             </>
@@ -4505,9 +4480,7 @@ function AdminScoring({ showToast, onRecalculate, adminToken }) {
               </div>
               {draftMeta && (
                 <div style={{ marginTop: 12, fontSize: 12, color: "var(--muted)", lineHeight: 1.5 }}>
-                  <div><b>AI Draft</b> · {draftMeta.model || "model"} · {draftMeta.searchMode || "cricbuzz-rapidapi-json"}</div>
-                  {draftMeta.resolvedMatchId ? <div>Resolved Cricbuzz match id: {draftMeta.resolvedMatchId}</div> : null}
-                  <div>Review or tweak the JSON, then click Preview and Apply Import.</div>
+                  <div>Review or tweak the imported JSON, then click Preview and Apply Import.</div>
                 </div>
               )}
             </div>
@@ -4529,20 +4502,6 @@ function AdminScoring({ showToast, onRecalculate, adminToken }) {
                     {importPreview.unmatched.length > 0 ? `Unmatched: ${importPreview.unmatched.join(", ")}` : "All names matched to fixture players."}
                   </div>
                 </>
-              )}
-              {draftMeta?.sources?.length > 0 && (
-                <div style={{ marginTop: 12 }}>
-                  <div style={{ fontFamily: "'Rajdhani',sans-serif", fontWeight: 700, fontSize: 14, marginBottom: 6 }}>AI Sources</div>
-                  <div style={{ display: "grid", gap: 8 }}>
-                    {draftMeta.sources.map((src, idx) => (
-                      <a key={`${src.url}-${idx}`} href={src.url} target="_blank" rel="noreferrer" style={{ textDecoration: "none", color: "inherit", border: "1px solid var(--border)", borderRadius: 8, padding: "8px 10px", background: "rgba(255,255,255,.03)" }}>
-                        <div style={{ fontSize: 12, fontWeight: 700 }}>{src.source || `Source ${idx + 1}`}</div>
-                        <div style={{ fontSize: 12, color: "var(--text)", marginTop: 2 }}>{src.title || src.url}</div>
-                        <div style={{ fontSize: 11, color: "var(--muted)", marginTop: 4 }}>{src.snippet || src.url}</div>
-                      </a>
-                    ))}
-                  </div>
-                </div>
               )}
             </div>
           </div>

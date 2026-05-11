@@ -1,6 +1,6 @@
 # IFL 2026 Fantasy League
 
-IFL is a full-stack IPL fantasy league app with user predictions, squad scoring, player swaps, leaderboard movement, admin scoring, and generated match reports.
+IFL is a full-stack IPL fantasy league app with user predictions, squad scoring, player swaps, leaderboard movement, and admin scoring.
 
 This local copy is configured to use SQLite by default.
 
@@ -19,8 +19,6 @@ flowchart LR
   A["Admin Browser"] --> FE
   FE --> API["FastAPI /api"]
   API --> DB["SQLite"]
-  API --> AOAI["Azure OpenAI"]
-  API --> CB["Cricbuzz RapidAPI"]
   API --> EXP["PDF/HTML/CSV Exports"]
   API --> AUD["Login Audit"]
   API --> SNAP["Leaderboard Snapshots"]
@@ -67,12 +65,6 @@ docker run --rm -p 4000:4000 \
   -e ADMIN_USERNAME='admin' \
   -e ADMIN_PASSWORD='<password>' \
   -e ADMIN_TOKEN_SECRET='<secret>' \
-  -e AZURE_OPENAI_ENDPOINT='https://<resource>.openai.azure.com/' \
-  -e AZURE_OPENAI_API_KEY='<azure-openai-key>' \
-  -e AZURE_OPENAI_DEPLOYMENT='gpt-4.1-mini' \
-  -e AZURE_OPENAI_API_VERSION='2024-10-21' \
-  -e CRICBUZZ_RAPIDAPI_KEY='<rapidapi-key>' \
-  -e CRICBUZZ_RAPIDAPI_HOST='cricbuzz-cricket.p.rapidapi.com' \
   ifl-fullstack:latest
 ```
 
@@ -82,12 +74,6 @@ docker run --rm -p 4000:4000 \
 - `ADMIN_USERNAME`: admin login username
 - `ADMIN_PASSWORD`: admin login password
 - `ADMIN_TOKEN_SECRET`: required in production
-- `AZURE_OPENAI_ENDPOINT`: Azure OpenAI resource endpoint for AI scoring
-- `AZURE_OPENAI_API_KEY`: Azure OpenAI key
-- `AZURE_OPENAI_DEPLOYMENT`: Azure OpenAI deployment name used for scoring drafts
-- `AZURE_OPENAI_API_VERSION`: Azure OpenAI API version
-- `CRICBUZZ_RAPIDAPI_KEY`: required for Cricbuzz scorecard fetch during AI scoring
-- `CRICBUZZ_RAPIDAPI_HOST`: defaults to `cricbuzz-cricket.p.rapidapi.com`
 - `ADMIN_TOKEN_TTL_SEC`: default `900`
 - `ADMIN_MAX_ATTEMPTS`: default `5`
 - `ADMIN_ATTEMPT_WINDOW_SEC`: default `900`
@@ -113,7 +99,6 @@ docker run --rm -p 4000:4000 \
 - Dashboard and access management.
 - Players and matches maintenance.
 - Scoring import through JSON/CSV/manual entry.
-- AI scoring draft flow backed by static Cricbuzz match-id mapping, Cricbuzz RapidAPI scorecards, Azure OpenAI draft generation, and fixture-player name reconciliation before preview.
 - Winner and no-result handling.
 - User management.
 - User Points screen showing match-wise player and prediction contribution.
@@ -147,18 +132,13 @@ Guest Demo is a read-only simulation for visitors:
 | Man of the Match | 50 |
 | Correct winner prediction | 50 |
 
-## AI Scoring Flow
-Admin scoring now supports an assisted draft path before import:
+## Manual Scoring Flow
+Admin scoring supports direct stat entry and manual import:
 
 1. Select the fixture in `Admin > Points Scoring`.
-2. Backend resolves the Cricbuzz `matchId` from `server/data/cricbuzz_match_ids_2026.json` using fixture teams and match date.
-3. Backend fetches the raw scorecard JSON from Cricbuzz RapidAPI.
-4. Azure OpenAI converts that structured scorecard into the app import schema.
-5. Backend tries to reconcile draft player names against the IFL fixture player pool before preview.
-6. Admin reviews the generated JSON, then runs `Preview`, `Apply Import`, and `Save & Recalculate`.
-
-The draft endpoint exposed to the admin UI is:
-- `POST /api/admin/scoring/draft-json`
+2. Enter player-wise stats directly, or paste/import JSON or CSV.
+3. Preview the import to validate player-name matching.
+4. Apply the import and run `Save & Recalculate`.
 
 ## Player Swap Model
 Swaps are intentionally stored separately from the original squad:
@@ -214,7 +194,6 @@ The compatibility store accepts:
 - `POST /api/admin/swaps/reject`
 - `POST /api/admin/users/points`
 - `GET /api/admin/login-audit`
-- `POST /api/admin/scoring/draft-json`
 - `GET /api/admin/exports/playoffs-predictions`
 - `GET /api/admin/exports/leaderboard/daily`
 - `GET /api/leaderboard/prev-ranks`
@@ -271,7 +250,6 @@ az webapp list -g <resource-group> -o table
 - Admin writes require a valid backend token.
 - Prediction edits should use `/api/user/prediction`; do not refresh the full `ifl_users` payload for a single prediction.
 - Scoring recalculation updates prediction correctness and awarded prediction points per match/user.
-- AI scoring depends on both Azure OpenAI credentials and `CRICBUZZ_RAPIDAPI_KEY`.
 - Admin Docker and shell env values should use plain ASCII quotes; curly quotes can break password comparison.
 - Leaderboard rank movement depends on snapshots in `leaderboard_snapshots`.
 - Login audit is written on successful login and records device/browser/OS signals.

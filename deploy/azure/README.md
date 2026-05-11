@@ -66,12 +66,12 @@ docker run --rm -p 4000:4000 \
 ```bash
 # Variables
 RG=<resource-group>
-LOCATION=eastus
+LOCATION=<azure-region>
 ACR=<acr-name>
 IMAGE=ifl-fullstack
 TAG=latest
 ENV=<container-app-env>
-APP=ifl-fantasy-app
+APP=<container-app-name>
 
 az group create -n $RG -l $LOCATION
 az acr create -n $ACR -g $RG --sku Basic
@@ -111,10 +111,10 @@ az containerapp create \
 ## Deploy to Azure App Service (Web App for Containers)
 
 ```bash
-RG=appsvc_linux_centralindia_basic  
-PLAN=appsvc_linux_centralindia_basic  
-APP=ifl-beta
-ACR=iflbeta  
+RG=<resource-group>
+PLAN=<app-service-plan-name>
+APP=<webapp-name>
+ACR=<acr-name>
 IMAGE=ifl-fullstack
 TAG=latest
 

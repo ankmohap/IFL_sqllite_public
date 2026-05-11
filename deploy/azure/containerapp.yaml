@@ -1,7 +1,7 @@
-location: eastus
-name: ifl-fantasy-app
+location: <azure-region>
+name: <container-app-name>
 properties:
-  managedEnvironmentId: /subscriptions/<SUBSCRIPTION_ID>/resourceGroups/<RG_NAME>/providers/Microsoft.App/managedEnvironments/<ENV_NAME>
+  managedEnvironmentId: <managed-environment-resource-id>
   configuration:
     ingress:
       external: true

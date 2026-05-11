@@ -264,7 +264,7 @@ See `deploy/azure/README.md` for App Service commands and Apple Silicon build no
 
 The deployed App Service name may differ from local examples. Confirm with:
 ```bash
-az webapp list -g appsvc_linux_centralindia_basic -o table
+az webapp list -g <resource-group> -o table
 ```
 
 ## Operational Notes
